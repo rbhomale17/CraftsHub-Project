@@ -1,0 +1,45 @@
+{
+  "Users": [
+    {
+      "id": 1,
+      "username": "rbhomale17",
+      "password": "Rushi@1432",
+      "firstname": "Rushikesh",
+      "lastname": "Bhomale",
+      "email": "rbhomale17@gmail.com"
+    },
+    {
+      "id": 2,
+      "username": "admin",
+      "password": "admin",
+      "firstname": "admin",
+      "lastname": "admin",
+      "email": "admin@gmail.com"
+    },
+    {
+      "username": "rbhomale17",
+      "password": "Rushi@1432",
+      "firstname": "Rushikesh",
+      "lastname": "Bhomale",
+      "email": "rbhomale17@gmail.com",
+      "id": 3
+    }
+  ],
+  "localUsers": [
+    {
+      "id": 1,
+      "password": "Rushi@123",
+      "firstname": "Rushi",
+      "lastname": "Bhomale",
+      "email": "rushi@gmail.com"
+    },
+    {
+      "id": 2,
+      "username": "user",
+      "password": "user",
+      "firstname": "user",
+      "lastname": "user",
+      "email": "user@gmail.com"
+    }
+  ]
+}
