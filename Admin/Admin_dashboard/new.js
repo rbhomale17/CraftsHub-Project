@@ -1,19 +1,20 @@
-const BaseUrl=`http://localhost:3000`
+// const BaseUrl=`http://localhost:3000`
+const BaseUrl=`https://mock-api-json-server-ooya.onrender.com`
 let AdminUsers=`${BaseUrl}/Users`;
 
 let but=document.querySelector("button");
 
 but.addEventListener("click",function(){
     let obj={
-        "username": "rbhomale17",
-        "password": "Rushi@1432",
-        "firstname":"Rushikesh",
-        "lastname":"Bhomale",
+        "username": "abhi  ",
+        "password": "abhi@1432",
+        "firstname":"abhi",
+        "lastname":"abhi",
         "email": "rbhomale17@gmail.com"
     }
     fetch(`${AdminUsers}`,{
-        method:"GET",
-        // body:JSON.stringify(obj),
+        method:"POST",
+        body:JSON.stringify(obj),
         headers:{
             "Content-Type":"application/json"
         }

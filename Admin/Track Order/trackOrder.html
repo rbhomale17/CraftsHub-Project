@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AppleOnline.com/SignUp</title>
+    <!-- <link rel="stylesheet" href="checkout.css"> -->
+ <style>
+    *{
+        box-sizing: border-box;
+    }
+    /* body{
+        /* background-image: linear-gradient(to bottom , #d675ce, #9df9ef,#ffa8B6); */
+    /* } */
+    #navbar{
+width: 100%;
+margin: auto;
+display: flex;
+justify-content: space-around;
+background-color: white;
+font-size: 14px;
+height: 44px;
+align-items: center;
+opacity: 0.8;
+box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+/* #navbar>div>a{
+width: 100%;
+justify-content: space-between;
+font-size: 20px;
+} */
+#navbar>img{
+width: 70px;
+}
+#navbar a{
+color: black;
+}
+#navbar>a:hover{
+color: lightgreen;
+opacity: 1;
+}
+#navbar>a>img{
+width: 45px;
+background: transparent;
+}
+       #container{
+            width: 100%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 20px 20px;
+            /* background-color: #cb7fa9; */
+            
+            padding: 30px;
+            margin-top: 30px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+        #container>div{
+            width: 98%;
+            margin: auto;
+            background-color: #89f7fe;
+            background-image: linear-gradient(to right, #60c37e, #382ebf);
+            height: 450px;
+            padding: 10px;
+            border-radius: 20px;
+            box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, 
+            rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+             rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+        }
+        #modify{
+        width: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        background-image: linear-gradient(to right, #a4ed8e, #4986d1);
+        height: 60px;
+        text-align: center;
+        align-items: center;
+        padding: 20px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        margin-top: 20px;
+        /* font-size: 40px; */
+      }
+      #sorting ,#filter{
+        /* background-color: red; */
+        padding: 10px;
+        font-size: 20px;
+        background-image: linear-gradient(to right, #e299da, #91e8f0);
+        border-radius: 20px;
+      }
+      #filter>input{
+        font-size: 25px;
+        border: none;
+        /* border-radius: 10px; */
+      }
+      #location{
+        font-size: 20px;
+        border-radius: 10px;
+        background: orange;
+      }
+      .logo>a>img{
+        width: 20%;
+        margin: auto;
+        height: 100%;
+      }
+      @media only screen and (max-width:650px){
+        #modify>#sort,.logo{
+            display: none;
+        }
+        #navbar{
+            flex-direction: column;
+            height: 90px;
+        }
+        #navbar>a:nth-child(2){
+            display: none;
+        }
+        #navbar>a:nth-child(3){
+            display: none;
+        }
+        #navbar>a:nth-child(4){
+            display: none;
+        }
+        #navbar>a:nth-child(4){
+            display: none;
+        }
+        #navbar>a:nth-child(5){
+            display: none;
+        }
+        #navbar>a:nth-child(6){
+            display: none;
+        }
+        #navbar>a:nth-child(7){
+            display: none;
+        }
+        #navbar>a:nth-child(8){
+            display: none;
+        }
+        #navbar>a:nth-child(9){
+            display: none;
+        }
+        #navbar>a:nth-child(10){
+            display: none;
+        }
+        #navbar>a:nth-child(11){
+            display: none;
+        }
+        #navbar>a:nth-child(12){
+            display: none;
+        }
+        #navbar>a:nth-child(12){
+            display: none;
+        }
+        /* #navbar>a:nth-child(13){
+            display: none;
+        } */
+        #navbar>a:nth-child(15){
+            display: none;
+        }
+        #navbar>#cart-count{
+            display: none;
+        }
+        #container{
+            grid-template-columns: repeat(1,1fr);
+        }
+        #container>div{
+            height: 500px;
+        }
+      }
+ </style>
+
+</head>
+<body>
+    <div id="navbar">
+        <a href="./index.html"><img src="./Images/Logos/Black.png"  alt="" ></a>
+        <a href="./1.Store.html">Store</a>
+        <a href="./mac.html">Mac</a>
+        <a href="./iPad.html">iPad</a>
+        <a href="./iphone.html">iPhone</a>
+        <a href="./watch.html">Watch</a>
+        <a href="./Airpod.html">AirPods</a>
+        <a href="./tv&home.html">TV & Home</a>
+        <a href="">Entertainment</a>
+        <a href="./assc.html">Accessories</a>
+        <a href="">Support</a>
+        <a href="./allproduct.html">All Products</a>        
+    </div>
+    <div id="modify">
+        <div id="sort">
+          <select name="sorting" id="sorting">
+            <option value="">Select Sort for Name</option>
+            <option value="High">Ascending</option>
+            <option value="Low">Descending</option>
+          </select>
+        </div>
+        <div class="logo">
+            <a href="./index.html"><img src="./Images/Logos/Black.png" alt=""></a>
+        </div>
+        <div id="filter">
+          <input type="search"  id="Name" placeholder="Search">
+        </div>
+      </div>
+    <div id="container">
+        <!-- append data here -->
+    </div>
+</body>
+<script>
+
+let locationArray=[
+			'Ahmednagar',
+			'Akola',
+			'Amravati',
+			'Bhandara',
+			'Beed',
+            'Angul',
+            'Aurangabad',
+            'Wardha',
+			'Washim',
+			'Yavatmal',
+			'Boudh (Bauda)',
+			'Bhadrak',
+            'Buldhana',
+			'Chandrapur',
+			'Dhule',
+			'Gadchiroli',
+			'Gondia',
+			'Hingoli',
+			'Jalgaon',
+			'Balangir',
+			'Bargarh (Baragarh)',
+			'Balasore',
+			'Cuttack',
+            'Bastar',
+			'Bijapur',
+			'Bilaspur',
+			'Dantewada',
+			'Dhamtari',
+			'Durg',
+			'Jashpur',
+			'Janjgir-Champa',
+			'Korba',
+			'Koriya',
+			'Debagarh (Deogarh)',
+			'Dhenkanal',
+			'Ganjam',
+			'Gajapati',
+			'Jharsuguda',
+			'Jajpur',
+			'Jagatsinghpur',
+			'Khordha',
+			'Kendujhar (Keonjhar)',
+			'Kalahandi',
+			'Kandhamal',
+			'Koraput',
+			'Kendrapara',
+			'Malkangiri',
+			'Mayurbhanj',
+			'Nabarangpur',
+			'Nuapada',
+			'Nayagarh',
+			'Puri',
+			'Rayagada',
+			'Sambalpur',
+			'Subarnapur (Sonepur)',
+			'Sundergarh',
+			'Kolhapur',
+			'Latur',
+			'Mumbai City',
+			'Mumbai suburban',
+			'Nandurbar',
+			'Nanded',
+			'Nagpur',
+			'Nashik',
+			'Osmanabad',
+			'Parbhani',
+			'Pune',
+			'Raigad',
+            'Dhenkanal',
+			'Ganjam',
+			'Gajapati',
+			'Jharsuguda',
+			'Jajpur',
+			'Jagatsinghpur',
+			'Khordha',
+			'Kendujhar (Keonjhar)',
+			'Kalahandi',
+			'Kandhamal',
+			'Koraput',
+			'Kendrapara',
+			'Malkangiri',
+			'Mayurbhanj',
+			'Nabarangpur',
+			'Nuapada',
+			'Ratnagiri',
+			'Sindhudurg',
+			'Sangli',
+			'Solapur',
+			'Satara',
+			'Thane',
+		];
+        
+        let trackOrder=JSON.parse(localStorage.getItem("track-my-order"))||[];
+        // console.log(trackOrder);
+        let container=document.getElementById("container");
+        display(trackOrder)
+        function display(data){
+
+            container.innerHTML=null;
+
+            data.forEach(function(element,index){
+
+                let card=document.createElement("div");
+                
+                let name=document.createElement("h3");
+                name.textContent=`Name :${element.name}`;
+
+                let mobile=document.createElement("h4");
+                mobile.textContent=`Mobile : ${element.mobile}`;
+
+                let address=document.createElement("h4");
+                address.textContent=`Address : ${element.address}`;
+
+                let city=document.createElement("h4");
+                city.textContent=`City : ${element.city}`;
+
+                let pinCode=document.createElement("h4");
+                pinCode.textContent=`Pin Code : ${element.pinCode}`;
+
+                let buy_Item=document.createElement("h4");
+                buy_Item.textContent=`Buy Item : ${element.buy_Item}`;
+
+                let location=document.createElement("button");
+                location.textContent="Track Location...";
+                location.id="location"
+                location.addEventListener("click",function(){
+
+                let Previous_location=document.createElement("h4");
+                Previous_location.textContent=`Previous Location : ${locationArray[index+4]}`;
+
+                let Current_location=document.createElement("h4");
+                Current_location.textContent=`Current Location : ${locationArray[index+3]}`;
+
+                let Next_location=document.createElement("h4");
+                Next_location.textContent=`Next Location : ${locationArray[index]}`;
+
+                card.append(name,mobile,address,city,pinCode,buy_Item,Next_location,Current_location,Previous_location);
+                })
+                
+                card.append(name,mobile,address,city,pinCode,buy_Item,location);
+                container.append(card)
+            })
+        }
+        let sortingselect=document.getElementById("sorting");
+
+        sortingselect.addEventListener("change",function(){
+            if(sortingselect.value==="High")
+            {
+                let sorted=trackOrder.sort(function(a,b){
+                    if(a.name<b.name)
+                    {
+                        return -1;
+                    }
+                });
+                display(sorted)
+            }
+            else
+            {
+                let sorted=trackOrder.sort(function(a,b){
+                    if(a.name>b.name)
+                    {
+                        return -1;
+                    }
+                });
+                display(sorted)
+            }
+        });
+
+        let filterCategory=document.querySelector("#filter>input");
+
+        let searchInput=document.getElementById("Name");
+
+        filterCategory.addEventListener("search",function(){
+            if(filterCategory.value==="")
+            {
+                display(trackOrder)
+            }
+            else
+            {
+            let searchName=trackOrder.filter(function(element,index){
+                if(filterCategory.value==element.name||filterCategory.value==element.mobile||filterCategory.value==element.pinCode||filterCategory.value==element.buy_Item)
+                {
+                    return true;
+                }
+            })
+            display(searchName)
+        }
+        })
+</script>
+</html>

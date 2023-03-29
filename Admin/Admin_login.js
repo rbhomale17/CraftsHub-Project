@@ -1,72 +1,105 @@
+//BaseUrl
+const BaseUrl="https://mock-api-json-server-ooya.onrender.com";
+const AdminUserUrl=`${BaseUrl}/Users`;
 
-    const BaseUrl=`http://localhost:3000`;
-    // const BaseUrl=`https://busy-lime-gecko-cape.cyclic.app`
-        // const BaseUrl=`https://js-201-json-server-prohbbhx5-rbhomale17.vercel.app`
-    let AdminUsers=`${BaseUrl}/Users`;
+// catching element from html page
 
-    window.addEventListener("load",function(){
-        fetchData();
-    })
+let usernameError=document.getElementById("username-error");
+let passwordError=document.getElementById("password-error");
+let submitError=document.getElementById("submit-error");
 
-    let myUserData=[];
-    function fetchData(){
-    fetch(`${AdminUsers}`,{
-        method:"GET",
-        // body:JSON.stringify(formdata),
-        headers:{
-            "content-type":"application/json"
-        }, 
-        })
-        .then((res)=>{
-        return res.json();
-        })
-        .then((data)=>{
-        console.log(data)
-        myUserData.push(data)
-        }).catch((err)=>{
-            console.log(err)
-        })
-    }
+// fetch request done on API server **onmouseleave** from input 
+var adminArray=[];
+var passwordResult=false;
+var usernameResult=false
+function fetchData(){
+    fetch(`${AdminUserUrl}`)
+.then((res)=>{
+    return res.json();
+})
+.then((data)=>{
+    // console.log(data);
+    adminArray.push(data)
+    usernameResult = validationUserName(data);
+    passwordResult = validationPassword(data);
+})
+};
 
-    let loginPopup=document.getElementById("loginPopup");
-    
-    let registeredUser=document.getElementById("username");
-    let password=document.getElementById("password");
-    let forms=document.getElementById("submit");
+// validation for user name from input
 
-    forms.addEventListener("click",function(){
-        let formdata={
-            username:registeredUser.value,
-            password:password.value,
-        }
-        console.log(formdata)
-        if(checkemailPass(formdata))
+var username=document.getElementById("username");
+function validationUserName(userArray){
+    for(let i=0; i<userArray.length; i++)
+    {
+        if(userArray[i].username===username.value)
         {
-            // console.log(formdata.username)
-            alert("Log in Successful")
-            setTimeout(()=>{
-                alert("Redirecting to APP.",onclick=redirect());
-            },3000)
-            
-        }else{
-            alert("Wrong Mobile/Email or Password.")
-        };
+            // console.log(userArray[i].username)
+            usernameError.innerHTML='<i class="fas fa-check-circle"></i>';
+            return true; 
+        }    
+    }
+    usernameError.innerHTML="User Name is wrong";
+    return false;
+};
+
+// validation for password from input
+
+var password=document.getElementById("password");
+function validationPassword(userArray){
+    for(let i=0; i<userArray.length; i++)
+    {
+        if(userArray[i].username===username.value&&userArray[i].password===password.value)
+        {
+            console.log(userArray[i].password)
+            passwordError.innerHTML='<i class="fas fa-check-circle"></i>';
+            return true; 
+        }    
+    }
+    passwordError.innerHTML="Write correct password";
+    return false;
+};
+
+// validation for form all inputs are working or data provided working fine or not
+
+// let flag=false;
+function validateSubmit(){
+    if(!usernameResult||!passwordResult){
+        submitError.innerHTML="Please fill the correct data to Login."
+        // console.log(usernameResult,passwordResult);
+        return false
+    }else{
+        // flag=true;
+        setUser(adminArray);
+        // console.log(usernameResult,passwordResult);
+        return true;
+    }
+};
+
+//submit event created here
+    var Submitbutton=document.getElementById("Submit");
+    Submitbutton.addEventListener("click",function(e){
+        e.preventDefault();
+        validateSubmit();
     });
     
-    function checkemailPass(data){
-        // console.log(myUserData[0]);
-        for(let i=0; i<myUserData[0].length; i++)
+// posting new Admin user data to server 
+function setUser(data){
+    for(let i=0; i<data.length; i++)
+    {  
+        if(data[i][i].username===username.value)
         {
-            // console.log(myUserData[0][i])
-            if(data.username==myUserData[0][i].username&&data.password==myUserData[0][i].password)
-            {
-                loginPopup.textContent=`Hey! Welcome ${myUserData[0][i].firstname} to Crafthub.com`
-                return true;
-                // break;
-            }
-            // console.log(data.username,myUserData[0][i].username,data.password,myUserData[0][i].password);
-        }
+            // console.log(data[i][i].username)
+            alert(`Welcome ${data[i][i].username} to Crafthub Admin`);
+            alert("Redirecting to Admin Dashboard",onclick=redirect());
+            return;
+        }    
     }
-    function redirect(){
-        location.href="./index.html"
-    }
+}
+
+// redirecting to dashboard
+
+function redirect(){
+    location.href="/Admin_ssp.html"
+}
+
+
