@@ -1,0 +1,61 @@
+#wrapper{
+    display: flex;
+    flex-direction: column;
+}
+#discount{
+    border: 1px solid #000000;
+    background-color: #ffffff;
+    height: 40px;
+    font-family: Muli;
+    font-size: 15px; 
+    font-weight: 700; 
+    letter-spacing: 2px;
+    text-align: center;
+    color: rgb(156, 0, 0);
+    padding-top: 10px;
+}.unav{
+    border: 1px solid black;
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.unav img{
+    border: solid;
+    object-fit: cover;
+    width: 250px;
+    height: 65px;
+}
+.unav .search{
+ border: 1px solid black;
+ display: flex;
+ width: 35rem;
+ height: 42px;
+ margin-top: 8px;
+ justify-content: space-between;
+ align-items: center;
+ border-radius: 3px;
+ border: none;
+ background-color: rgb(205, 202, 202);
+}
+.unav #search{
+    width: 78%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color: rgb(205, 202, 202) ;
+}
+.unav .title{
+    padding-left: 10px;
+}
+.unav i{
+    cursor: pointer;
+    padding-right: 20px;
+}
+.unav .signIn-text{
+    color: black;
+    font-weight: 500;
+}
+#popup{
+    margin-top: 300px;
+}
