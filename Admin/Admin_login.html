@@ -1,34 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>crafthub.com/Login/admin</title>
     <link rel="stylesheet" href="Admin_login.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<div id="ascach">
-    <div id="main">
-        <div class="add">
-            <h2 id="loginPopup">Welcome to Crafthub.com</h2>
-            <h5>This is Online Products Retailer store.</h5>
-            <img src="./Logo/Crafthub.com.jpg" alt="">
-            <div>
-                <a href="./forgotpass.html"><h3>Forgot Password ?</h3></a>
-                <!-- <a href="./Signup.html"><h3>Click here for <span>Create New Account <img src="./Images/Logos/Black.png" alt=""></span></h3></a> -->
-            </div>
-        </div>
-        <div id="form">
-            <h2>Log in to Crafthub.com from Here.</h2>
-            <input type="text" required placeholder="Enter Username" id="username">
-            <input type="password" required placeholder="Enter Password" name="password" id="password">
-            <!-- <input id="submit" name="submit" value="Submit" type="submit"> -->
-            <button id="submit">Submit</button>
-            <img src="https://i.pinimg.com/originals/ba/9f/d1/ba9fd18b416ed2b9207fda4b8a09e5d1.png" alt="">
-        </div>
-    </div>
-</div>
+  <div class="container">
+    <form>
+      <i class="fa-solid fa-user"></i>
+
+      <div class="input-group">
+        <label>User Name</label>
+        <input onmouseleave="fetchData()" type="text" id="username" placeholder="Enter User Name">
+        <span id="username-error"></span>
+      </div>
+      <div class="input-group">
+        <label>Password</label>
+        <input onmouseleave="fetchData()" type="password" id="password" placeholder="Enter Your Password">
+        <span id="password-error"></span>
+      </div>
+
+    <button id="Submit">Submit</button>
+    <span id="submit-error"></span>
+  </form>  
+  </div>
+   
 </body>
-<script src="./Admin_login.js"></script>
+<script src="Admin_login.js"></script>
 </html>

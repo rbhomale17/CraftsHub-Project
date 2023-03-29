@@ -1,19 +1,12 @@
-GET  http://localhost:3000/users
+GET  https://mock-api-json-server-ooya.onrender.com/Users
 
 ###
 
-POST http://localhost:3000/users
+DELETE  https://mock-api-json-server-ooya.onrender.com/Users/13
 Content-Type: application/json
 
-{
-    "password": "Abhi@123",
-    "firstname": "Abhi",
-    "lastname": "Raghatate",
-    "email": "abhi@gmail.com"
-  }
-
 ###
-PATCH  http://localhost:3000/AdminUsers/10
+PATCH  https://mock-api-json-server-ooya.onrender.com/Users/8
 Content-Type: application/json
 
 {
@@ -23,17 +16,19 @@ Content-Type: application/json
 }
 
 ###
-POST http://localhost:3000/AdminUsers
+POST https://mock-api-json-server-ooya.onrender.com/Users
 Content-Type: application/json
 
-{
-    
-    "username":"rushi",
-    "password":"rushi"
-}
+ {
+    "username": "astha",
+    "password": "Astha@1432",
+    "firstname": "Astha",
+    "lastname": "gfhf",
+    "email": "astha@gmail.com"
+  }
 
 ### filter by id
-GET https://busy-lime-gecko-cape.cyclic.app/localUsers
+GET https://mock-api-json-server-ooya.onrender.com/Users
 #fetch(`${baseUsl}`,{
 # method:"POST",
 # body:JSON.stringify(formdata),

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Admin_signup.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <form>
+      <i class="fa-solid fa-user"></i>
+
+      <!-- <div class="input-group">
+        <label>First Name</label>
+        <input onkeyup="validationFirstName()" type="text" id="username" placeholder="Enter username">
+        <span id="firstname-error"></span>
+      </div> -->
+
+      <div class="input-group">
+        <label>First Name</label>
+        <input onkeyup="validationFirstName()" type="text" id="firstname" placeholder="Enter First Name">
+        <span id="firstname-error"></span>
+      </div>
+
+      <div class="input-group">
+        <label>Last Name</label>
+        <input onkeyup="validationLastName()" type="text" id="lastname" placeholder="Enter Last Name">
+        <span id="lastname-error"></span>
+      </div>
+
+      <div class="input-group">
+        <label>Email Id</label>
+        <input onkeyup="validationEmail()" type="email" id="email" placeholder="Enter Email">
+        <span id="email-error"></span>
+      </div>   
+
+      <div class="input-group">
+        <label>Password</label>
+        <input onkeyup="validationPassword()" type="password" id="password" placeholder="Enter Your Password">
+        <span id="password-error"></span>
+      </div>
+
+    <button id="Submit">Submit</button>
+    <span id="submit-error"></span>
+    <!-- <img src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60" onclick="sentToHome()" alt=""> -->
+  </form>  
+  </div>
+   
+</body>
+<script src="Admin_signup.js"></script>
+</html>
