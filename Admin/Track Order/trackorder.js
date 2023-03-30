@@ -1,0 +1,166 @@
+//creating BaseURL for fetching data...
+
+const BaseUrl=`https://project-json-server-dkem.onrender.com`;
+const trackOrder=`${BaseUrl}/trackorder`;
+
+// Declaring Variables catching them form HTML page here...
+
+var container=document.getElementById("container");
+var searchBar=document.getElementById("search");
+
+// fetching data on window load
+
+window.addEventListener("load",function(){
+    fetchData();
+})
+
+// Declaring a global array of trackorder
+var globalOrderArray=[]
+// function for fetch data from json server (BaseUrl).
+function fetchData(){
+
+    fetch(`${trackOrder}`,{
+        method:"GET",
+        // body:JSON.stringify(obj),
+        headers:{
+        "Content-Type":"application/json",
+        }
+    })
+    .then((res)=> {
+    return res.json()
+    })
+    .then((data)=>{
+    console.log(data)
+    globalOrderArray.push(data)
+    getCardList(data)
+    })
+}
+
+// function for getting cardlist of appended data after fetching done. 
+function getCardList(data){
+
+    container.innerHTML=null;
+
+    let cardList=document.createElement("div");
+    cardList.classList.add("card-list");
+    cardList.id="card-list";
+
+    container.append(cardList);
+    // running loop on fetched data and pass to another function thet will return card that we can append to cardlist.
+
+    data.forEach((element) => {
+        let card=getCard(element.name,element.phone,element.address,element.city,element.pinCode,element.item,element.Previous_location,element.Current_location,element.Next_location);
+        cardList.append(card);
+    });
+
+    return cardList;
+}
+
+//function thet will create and return card that we can append to cardlist.
+var count=0;
+function getCard(name,mobile,address,city,pinCode,item,Previous_location,Current_location,Next_location){
+
+    let card= document.createElement("div");
+    card.classList.add("card");
+    card.id="card";
+
+    let datalist=document.createElement("div");
+    datalist.classList="data-list";
+    datalist.id="data-list";
+
+    let username=document.createElement("h3");
+    username.classList="name";
+    username.textContent=`Name : ${name}`;
+
+    let usermobile=document.createElement("h4");
+    usermobile.classList="mobile";
+    usermobile.textContent=`Mobile : ${mobile}`;
+
+    let useraddress=document.createElement("h4");
+    useraddress.classList="address"
+    useraddress.textContent=`Address : ${address}`;
+
+    let usercity=document.createElement("h4");
+    usercity.classList="city";
+    usercity.textContent=`City : ${city}`;
+
+    let userPinCode=document.createElement("h4");
+    userPinCode.classList="pin-code";
+    userPinCode.textContent=`Pin Code : ${pinCode}`;
+
+    let userbuyitem=document.createElement("h4");
+    userbuyitem.classList="buyitem";
+    userbuyitem.textContent=`Item Buy : ${item}`;
+
+    datalist.append(username,usermobile,useraddress,usercity,userPinCode,userbuyitem);
+    
+    // itemLocation button can be use for showing the location buyitem of customer.
+
+    let itemlocation=document.createElement("button");
+    itemlocation.classList="item-location";
+    itemlocation.textContent="Track Location...";
+    itemlocation.id="item-location";
+
+    itemlocation.addEventListener("click",function(){
+    let itemPrevious_location=document.createElement("h4");
+    itemPrevious_location.textContent=`Previous Location : ${Previous_location}`;
+
+    let itemCurrent_location=document.createElement("h4");
+    itemCurrent_location.textContent=`Current Location : ${Current_location}`;
+
+    let itemNext_location=document.createElement("h4");
+    itemNext_location.textContent=`Next Location : ${Next_location}`;
+
+    card.append(datalist,itemPrevious_location,itemCurrent_location,itemNext_location);
+    return card;
+    })
+
+    card.append(datalist,itemlocation);
+    return card;
+};
+
+//pending
+
+searchBar.addEventListener("search",function(){
+    // console.log(searchBar.value);
+    if(searchBar.value==="")
+    {
+        fetchData();
+    }else{
+        let searchResult=globalOrderArray.filter((element,index)=>{
+            let i=0;
+            // while(i<globalOrderArray.length)
+            {
+                console.log(i);
+            if(searchBar.value===element[i].name||searchBar.value===element.firstname||searchBar.value===element.phone||searchBar.value===element.city||searchBar.value===element.pinCode||searchBar.value===element.item)
+            {
+                // return true;
+                console.log(element[i].name)
+            }
+            }
+            // console.log(element[].name)
+        });
+        // console.log(searchResult)
+        // getCardList(searchResult);
+    }
+})
+// let filterCategory=document.querySelector("#filter>input");
+
+// let searchInput=document.getElementById("Name");
+
+// filterCategory.addEventListener("search",function(){
+//     if(filterCategory.value==="")
+//     {
+//         display(trackOrder)
+//     }
+//     else
+//     {
+//     let searchName=trackOrder.filter(function(element,index){
+//         if(filterCategory.value==element.name||filterCategory.value==element.mobile||filterCategory.value==element.pinCode||filterCategory.value==element.buy_Item)
+//         {
+//             return true;
+//         }
+//     })
+//     display(searchName)
+// }
+// })

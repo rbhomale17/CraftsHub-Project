@@ -4,6 +4,29 @@ GET  https://mock-api-json-server-ooya.onrender.com/Users
 
 DELETE  https://mock-api-json-server-ooya.onrender.com/Users/13
 Content-Type: application/json
+###
+GET https://project-json-server-dkem.onrender.com/trackorder
+###
+DELETE   https://project-json-server-dkem.onrender.com/trackorder/1
+Content-Type: application/json
+
+###
+POST https://project-json-server-dkem.onrender.com/trackorder
+Content-Type: application/json
+
+{
+  "name":"Abhi",
+  "phone":9970422217,
+  "address":"At Post Salod (Hirapur) Tahluka & District Wardha, 442001",
+  "pinCode":442001,
+  "city":"Wardha",
+  "state":"Maharashtra",
+  "item": "Intees Fashion Men's Premium Round Neck Olive Printed Cotton T-shirt (xl)",
+  "price":499,
+  "Current_location":"Nagpur",
+  "Previous_location":"Pune",
+  "Next_location":"Wardha"
+}
 
 ###
 PATCH  https://mock-api-json-server-ooya.onrender.com/Users/8

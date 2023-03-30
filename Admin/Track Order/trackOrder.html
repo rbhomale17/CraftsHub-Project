@@ -4,47 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AppleOnline.com/SignUp</title>
+    <title>Crafthub.com/trackorder/</title>
     <!-- <link rel="stylesheet" href="checkout.css"> -->
  <style>
     *{
         box-sizing: border-box;
     }
-    /* body{
-        /* background-image: linear-gradient(to bottom , #d675ce, #9df9ef,#ffa8B6); */
-    /* } */
-    #navbar{
-width: 100%;
-margin: auto;
-display: flex;
-justify-content: space-around;
-background-color: white;
-font-size: 14px;
-height: 44px;
-align-items: center;
-opacity: 0.8;
-box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-}
-/* #navbar>div>a{
-width: 100%;
-justify-content: space-between;
-font-size: 20px;
-} */
-#navbar>img{
-width: 70px;
-}
-#navbar a{
-color: black;
-}
-#navbar>a:hover{
-color: lightgreen;
-opacity: 1;
-}
-#navbar>a>img{
-width: 45px;
-background: transparent;
-}
-       #container{
+       #container>.card-list{
             width: 100%;
             margin: auto;
             display: grid;
@@ -56,11 +22,11 @@ background: transparent;
             margin-top: 30px;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         }
-        #container>div{
+        #container>.card-list>.card{
             width: 98%;
             margin: auto;
             background-color: #89f7fe;
-            background-image: linear-gradient(to right, #60c37e, #382ebf);
+            background-image: linear-gradient(to right, #c1e3cb, #b4b1e2);
             height: 450px;
             padding: 10px;
             border-radius: 20px;
@@ -68,46 +34,178 @@ background: transparent;
             rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
              rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
         }
-        #modify{
-        width: 100%;
-        margin: auto;
-        display: flex;
-        justify-content: space-between;
-        background-image: linear-gradient(to right, #a4ed8e, #4986d1);
-        height: 60px;
-        text-align: center;
-        align-items: center;
-        padding: 20px;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-        margin-top: 20px;
-        /* font-size: 40px; */
-      }
-      #sorting ,#filter{
-        /* background-color: red; */
-        padding: 10px;
-        font-size: 20px;
-        background-image: linear-gradient(to right, #e299da, #91e8f0);
-        border-radius: 20px;
-      }
-      #filter>input{
-        font-size: 25px;
-        border: none;
-        /* border-radius: 10px; */
-      }
-      #location{
-        font-size: 20px;
-        border-radius: 10px;
-        background: orange;
-      }
       .logo>a>img{
         width: 20%;
         margin: auto;
         height: 100%;
       }
+      
+      body{
+            margin: 0px;
+            padding: 0px;
+        }
+        #wrapper{
+            display: flex;
+            flex-direction: column;
+        }
+        #discount{
+            border: 1px solid #000000;
+            background-color: #ffffff;
+            height: 40px;
+            font-family: Muli;
+            font-size: 15px; 
+            font-weight: 700; 
+            letter-spacing: 2px;
+            text-align: center;
+            color: rgb(156, 0, 0);
+            padding-top: 10px;
+        }
+        #shop-line{
+            width: 90%;
+            margin: auto;
+            margin-top: 40px;
+            position: relative;
+            color:#000000;
+            font-size:22px;
+            line-height:20px;
+            font-family: Poppins;
+            background-color: #ffffff;
+        }
+        #shop-line ::before{
+            content: "";
+            display: block;
+            border-bottom: 1px solid rgb(204, 198, 198);
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+        }
+        #shop-line ::after {
+            content: "Shop By Category";
+            display: inline-block;
+            background-color: #ffffff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 0px 10px;
+        }
+        /* #container{
+            margin-top: 40px;
+            border: 2px solid black;
+        } */
+        #slider{
+            max-width: 1600px;
+        }
+        #slider .images{
+            cursor: pointer;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        #slider img{
+            height: 180px;
+            width: calc(100%/5);
+            object-fit: cover;
+        }
+        #slider img:first-child{
+            margin-left: 0px;
+        }
+        #slider{
+            position: absolute;
+        }
+        .unav{
+            border: 1px solid black;
+            height: 70px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .unav img{
+            width: 150px;
+            height: 100%;
+        }
+        .unav .search{
+         border: 1px solid black;
+         display: flex;
+         width: 35rem;
+         height: 42px;
+         margin-top: 8px;
+         justify-content: space-between;
+         align-items: center;
+         border-radius: 3px;
+         border: none;
+         background-color: rgb(205, 202, 202);
+        }
+        .unav #search{
+            width: 78%;
+            height: 100%;
+            border: none;
+            outline: none;
+            background-color: rgb(205, 202, 202) ;
+        }
+        .unav .title{
+            padding-left: 10px;
+        }
+        .unav i{
+            cursor: pointer;
+            padding-right: 20px;
+        }
+        .unav .signIn-text{
+            color: black;
+            font-weight: 500;
+        }
+        .lnav{
+            width: 100%;
+            height: 50px;
+            margin: auto;
+            background-color: #902735;
+            font-size: 15px; 
+            font-family: poppins;
+            font-weight: 600; 
+            display: grid;
+            grid-template-columns: repeat(7,1fr);
+            align-items: center;
+        }
+        .lnav a{
+            text-decoration: none;
+            color: #ffffff;
+            /* align-items: center; */
+            /* align-content: center; */
+        }
+        .lnav a:hover{
+            color: #902735;
+        }
+         .a{
+            height: 50px;
+            display: flex;
+            justify-content:center; 
+            align-items: center;
+            margin-left: 2px;
+            /* width: 10%; */
+        }
+         .a:hover{
+        background-color: #f7ebeb;
+         color: aqua;
+        }
+        .lnav-div{
+            background-color: #902735;
+        }
+
       @media only screen and (max-width:650px){
-        #modify>#sort,.logo{
+        .lnav{
+            grid-template-columns: repeat(1,1fr);
+            height: 400px;
+            /* gap :10px 10px; */
+        }
+        /* .lnav-div{
+            display: block;
+        } */
+        #adminname{
             display: none;
         }
+        /* #modify>#sort,.logo{
+            display: none;
+        } */
         #navbar{
             flex-direction: column;
             height: 90px;
@@ -163,15 +261,66 @@ background: transparent;
         #container{
             grid-template-columns: repeat(1,1fr);
         }
-        #container>div{
+        ##container>.card-list>.card{
             height: 500px;
         }
       }
  </style>
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+ 
 
 </head>
 <body>
-    <div id="navbar">
+    <div id="wrapper">
+        <div id="nav">
+            <div class="unav">
+                <div class="logo">
+                    <a href="/Admin/Admin_dashboard/dashboard.html"><img src="/Admin/Logo/2.logo.jpg" alt=""></a>
+                    
+                </div>
+                <div class="search">
+                    <!-- <div class="title">SEARCH</div> -->
+                        <input type="search" name="" id="search" placeholder="Search here for products">
+                        <div class="search-icon">
+                            <i class="fa fa-search"></i>
+                        </div>
+                    </div>
+                    <a href="" id="location"></a>
+                    <a href="/Admin/Admin_signup.html" id="signIn" style="padding: 13px 15px; text-decoration: none;"></span>
+                    <span id="adminname" class="signIn-text"><i class="fa fa-user" style="font-size: 20px; margin-top: 7px;color: black;">
+                    </i>New Admin Registration</span>
+                    <a href=""></a>
+                    <a href=""></a>
+                </div>
+                <div class="lnav-div">
+                    <div class="lnav">
+                        <div class="a">
+                            <a href="/Admin/Admin_signup.html">Admin Registration</a>
+                        </div>
+                        <div class="a">
+                            <a href="">All Products</a>
+                        </div>
+                        <div class="a">
+                            <a href="">Fashion</a>
+                        </div>
+                        <div class="a">
+                            <a href="">Beauty Care</a>
+                        </div>
+                        <div class="a">
+                            <a href="">Home Decor</a>
+                        </div>
+                        <div class="a">
+                            <a href="">Electronics</a>
+                        </div>
+                        <div class="a">
+                            <a href="">Track All Orders</a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+</div>
+    <!-- <div id="navbar">
         <a href="./index.html"><img src="./Images/Logos/Black.png"  alt="" ></a>
         <a href="./1.Store.html">Store</a>
         <a href="./mac.html">Mac</a>
@@ -184,9 +333,9 @@ background: transparent;
         <a href="./assc.html">Accessories</a>
         <a href="">Support</a>
         <a href="./allproduct.html">All Products</a>        
-    </div>
-    <div id="modify">
-        <div id="sort">
+    </div> -->
+    <!-- <div id="modify"> -->
+        <!-- <div id="sort">
           <select name="sorting" id="sorting">
             <option value="">Select Sort for Name</option>
             <option value="High">Ascending</option>
@@ -195,205 +344,109 @@ background: transparent;
         </div>
         <div class="logo">
             <a href="./index.html"><img src="./Images/Logos/Black.png" alt=""></a>
-        </div>
-        <div id="filter">
+        </div> -->
+        <!-- <div id="filter">
           <input type="search"  id="Name" placeholder="Search">
         </div>
-      </div>
+      </div> -->
     <div id="container">
-        <!-- append data here -->
+         <!-- append data here -->
     </div>
 </body>
 <script>
 
-let locationArray=[
-			'Ahmednagar',
-			'Akola',
-			'Amravati',
-			'Bhandara',
-			'Beed',
-            'Angul',
-            'Aurangabad',
-            'Wardha',
-			'Washim',
-			'Yavatmal',
-			'Boudh (Bauda)',
-			'Bhadrak',
-            'Buldhana',
-			'Chandrapur',
-			'Dhule',
-			'Gadchiroli',
-			'Gondia',
-			'Hingoli',
-			'Jalgaon',
-			'Balangir',
-			'Bargarh (Baragarh)',
-			'Balasore',
-			'Cuttack',
-            'Bastar',
-			'Bijapur',
-			'Bilaspur',
-			'Dantewada',
-			'Dhamtari',
-			'Durg',
-			'Jashpur',
-			'Janjgir-Champa',
-			'Korba',
-			'Koriya',
-			'Debagarh (Deogarh)',
-			'Dhenkanal',
-			'Ganjam',
-			'Gajapati',
-			'Jharsuguda',
-			'Jajpur',
-			'Jagatsinghpur',
-			'Khordha',
-			'Kendujhar (Keonjhar)',
-			'Kalahandi',
-			'Kandhamal',
-			'Koraput',
-			'Kendrapara',
-			'Malkangiri',
-			'Mayurbhanj',
-			'Nabarangpur',
-			'Nuapada',
-			'Nayagarh',
-			'Puri',
-			'Rayagada',
-			'Sambalpur',
-			'Subarnapur (Sonepur)',
-			'Sundergarh',
-			'Kolhapur',
-			'Latur',
-			'Mumbai City',
-			'Mumbai suburban',
-			'Nandurbar',
-			'Nanded',
-			'Nagpur',
-			'Nashik',
-			'Osmanabad',
-			'Parbhani',
-			'Pune',
-			'Raigad',
-            'Dhenkanal',
-			'Ganjam',
-			'Gajapati',
-			'Jharsuguda',
-			'Jajpur',
-			'Jagatsinghpur',
-			'Khordha',
-			'Kendujhar (Keonjhar)',
-			'Kalahandi',
-			'Kandhamal',
-			'Koraput',
-			'Kendrapara',
-			'Malkangiri',
-			'Mayurbhanj',
-			'Nabarangpur',
-			'Nuapada',
-			'Ratnagiri',
-			'Sindhudurg',
-			'Sangli',
-			'Solapur',
-			'Satara',
-			'Thane',
-		];
-        
-        let trackOrder=JSON.parse(localStorage.getItem("track-my-order"))||[];
-        // console.log(trackOrder);
-        let container=document.getElementById("container");
-        display(trackOrder)
-        function display(data){
-
-            container.innerHTML=null;
-
-            data.forEach(function(element,index){
-
-                let card=document.createElement("div");
-                
-                let name=document.createElement("h3");
-                name.textContent=`Name :${element.name}`;
-
-                let mobile=document.createElement("h4");
-                mobile.textContent=`Mobile : ${element.mobile}`;
-
-                let address=document.createElement("h4");
-                address.textContent=`Address : ${element.address}`;
-
-                let city=document.createElement("h4");
-                city.textContent=`City : ${element.city}`;
-
-                let pinCode=document.createElement("h4");
-                pinCode.textContent=`Pin Code : ${element.pinCode}`;
-
-                let buy_Item=document.createElement("h4");
-                buy_Item.textContent=`Buy Item : ${element.buy_Item}`;
-
-                let location=document.createElement("button");
-                location.textContent="Track Location...";
-                location.id="location"
-                location.addEventListener("click",function(){
-
-                let Previous_location=document.createElement("h4");
-                Previous_location.textContent=`Previous Location : ${locationArray[index+4]}`;
-
-                let Current_location=document.createElement("h4");
-                Current_location.textContent=`Current Location : ${locationArray[index+3]}`;
-
-                let Next_location=document.createElement("h4");
-                Next_location.textContent=`Next Location : ${locationArray[index]}`;
-
-                card.append(name,mobile,address,city,pinCode,buy_Item,Next_location,Current_location,Previous_location);
-                })
-                
-                card.append(name,mobile,address,city,pinCode,buy_Item,location);
-                container.append(card)
-            })
-        }
-        let sortingselect=document.getElementById("sorting");
-
-        sortingselect.addEventListener("change",function(){
-            if(sortingselect.value==="High")
-            {
-                let sorted=trackOrder.sort(function(a,b){
-                    if(a.name<b.name)
-                    {
-                        return -1;
-                    }
-                });
-                display(sorted)
-            }
-            else
-            {
-                let sorted=trackOrder.sort(function(a,b){
-                    if(a.name>b.name)
-                    {
-                        return -1;
-                    }
-                });
-                display(sorted)
-            }
-        });
-
-        let filterCategory=document.querySelector("#filter>input");
-
-        let searchInput=document.getElementById("Name");
-
-        filterCategory.addEventListener("search",function(){
-            if(filterCategory.value==="")
-            {
-                display(trackOrder)
-            }
-            else
-            {
-            let searchName=trackOrder.filter(function(element,index){
-                if(filterCategory.value==element.name||filterCategory.value==element.mobile||filterCategory.value==element.pinCode||filterCategory.value==element.buy_Item)
-                {
-                    return true;
-                }
-            })
-            display(searchName)
-        }
-        })
+// let locationArray=[
+// 			'Ahmednagar',
+// 			'Akola',
+// 			'Amravati',
+// 			'Bhandara',
+// 			'Beed',
+//             'Angul',
+//             'Aurangabad',
+//             'Wardha',
+// 			'Washim',
+// 			'Yavatmal',
+// 			'Boudh (Bauda)',
+// 			'Bhadrak',
+//             'Buldhana',
+// 			'Chandrapur',
+// 			'Dhule',
+// 			'Gadchiroli',
+// 			'Gondia',
+// 			'Hingoli',
+// 			'Jalgaon',
+// 			'Balangir',
+// 			'Bargarh (Baragarh)',
+// 			'Balasore',
+// 			'Cuttack',
+//             'Bastar',
+// 			'Bijapur',
+// 			'Bilaspur',
+// 			'Dantewada',
+// 			'Dhamtari',
+// 			'Durg',
+// 			'Jashpur',
+// 			'Janjgir-Champa',
+// 			'Korba',
+// 			'Koriya',
+// 			'Debagarh (Deogarh)',
+// 			'Dhenkanal',
+// 			'Ganjam',
+// 			'Gajapati',
+// 			'Jharsuguda',
+// 			'Jajpur',
+// 			'Jagatsinghpur',
+// 			'Khordha',
+// 			'Kendujhar (Keonjhar)',
+// 			'Kalahandi',
+// 			'Kandhamal',
+// 			'Koraput',
+// 			'Kendrapara',
+// 			'Malkangiri',
+// 			'Mayurbhanj',
+// 			'Nabarangpur',
+// 			'Nuapada',
+// 			'Nayagarh',
+// 			'Puri',
+// 			'Rayagada',
+// 			'Sambalpur',
+// 			'Subarnapur (Sonepur)',
+// 			'Sundergarh',
+// 			'Kolhapur',
+// 			'Latur',
+// 			'Mumbai City',
+// 			'Mumbai suburban',
+// 			'Nandurbar',
+// 			'Nanded',
+// 			'Nagpur',
+// 			'Nashik',
+// 			'Osmanabad',
+// 			'Parbhani',
+// 			'Pune',
+// 			'Raigad',
+//             'Dhenkanal',
+// 			'Ganjam',
+// 			'Gajapati',
+// 			'Jharsuguda',
+// 			'Jajpur',
+// 			'Jagatsinghpur',
+// 			'Khordha',
+// 			'Kendujhar (Keonjhar)',
+// 			'Kalahandi',
+// 			'Kandhamal',
+// 			'Koraput',
+// 			'Kendrapara',
+// 			'Malkangiri',
+// 			'Mayurbhanj',
+// 			'Nabarangpur',
+// 			'Nuapada',
+// 			'Ratnagiri',
+// 			'Sindhudurg',
+// 			'Sangli',
+// 			'Solapur',
+// 			'Satara',
+// 			'Thane',
+// 		];
 </script>
+<script src="./trackorder.js"></script>
 </html>
