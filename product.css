@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#navbar{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    /* border: 2px solid red; */
+}
+#navbar-first{
+    width: 100%;
+    height: 50px;
+    border: 1px solid black;
+    text-align: center;
+    font-family: Muli;
+    font-size: 15px;
+    font-weight: 700px;
+    color: rgb(156,0,0);
+}
+#navbar-second{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    padding-left: 35px;
+}
+#navbar-icons{
+    width: 90%;
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+#navdar-logo-img>img{
+    /* border: 1px solid red; */
+    width: 90px;
+    padding-left: 20px;
+}
+#search-product{
+    /* border: 2px solid green; */
+    border-radius: 5px;
+    height: 40px;
+    width: 390px;
+    background-color: rgb(222, 218, 218);
+    display: flex;
+    align-items: center;
+}
+.search-box{
+    /* border: 2px solid brown; */
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    width: 370px;
+    justify-content: space-between;
+}
+#search-text{
+    background-color: rgb(222, 218, 218);
+    border: none;
+    width: 250px;
+    height: 40px;
+}
+#sign-in-icon{
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-between;
+    
+}
+#wishlist-icon{
+    display: flex;
+    justify-content: space-between;
+}
+#cart-icon{
+    display: flex;
+    justify-content: space-between;
+}
+#navbar-second a{
+    color: black;
+    text-decoration: none;
+}
+#navbar-third{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    margin: auto;
+    background-color: rgb(156,0,0);
+}
+.links-div{
+    width: 90%;
+    margin: auto;
+}
+.links-div ul{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+.links-div a{
+    text-decoration: none;
+    color:white;
+}
+.links-div ul li {
+    list-style-type: none;
+}
+#productpage{
+    display: grid;
+    grid-template-columns:repeat(4,280px);
+    grid-template-rows:repeat(13,400px);
+    gap:20px;
+    justify-content: end;
+}
+#productpage>div>p{
+    font-size: 20px;
+    /* font-weight: 600; */
+    font-family:'Times New Roman', Times, serif;
+}
+#productpage>div>h4{
+    
+}
