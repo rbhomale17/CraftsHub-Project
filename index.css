@@ -2,6 +2,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: poppins;
 }
 #wrapper{
     display: flex;
@@ -22,10 +23,10 @@
 #shop-line{
     width: 90%;
     margin: auto;
-    margin-top: 40px;
+    margin-top: 60px;
     position: relative;
     color:#000000;
-    font-size:22px;
+    font-size:25px;
     line-height:20px;
     font-family: Poppins;
     background-color: #ffffff;
@@ -49,7 +50,103 @@
     transform: translate(-50%, -50%);
     padding: 0px 10px;
 }
-#container{
+
+/* <--- Navbar CSS ---> */
+
+.navbar {
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+  /* Style the top navigation */
+  .top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  /* Style the logo */
+  .logo{
+    margin-left: 30px;
+  }
+  .logo img{
+   width: 200px;
+   height: 60px;
+  }
+  /* Style the search bar */
+  .search-bar {
+display: flex;
+ margin-left: -20%;
+ width: 30%;
+ height: 42px;
+ padding: 15px;
+ justify-content: space-between;
+ align-items: center;
+ border-radius: 3px;
+ border: none;
+ background-color: rgb(205, 202, 202);
+  }
+  .search-bar input[type="search"] {
+    width: 78%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color: rgb(205, 202, 202) ;
+  }
+  /* Style the navigation buttons */
+  .nav-buttons {
+    display: flex;
+    margin-right: 30px;
+  }
+  .nav-buttons i{
+    margin-right: 5px;
+  }
+  .nav-buttons a {
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    padding-right: 40px;
+  }
+  /* Style the bottom navigation */
+  .bottom-nav {
+    display: flex;
+    justify-content: center;
+    background-color: #902735;
+  }
+  .bottom-nav a {
+    font-family: poppins;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 20px;
+  }
+  .bottom-nav a:hover{
+    background-color: rgb(245, 239, 230);
+    color: #902735;
+    }
+  /* Media query for responsive design */
+  @media screen and (max-width: 1020px){
+.search-bar{
+    display: none;
+}
+  }
+  @media screen and (max-width: 600px) {
+    .nav-buttons {
+      flex-direction: column;
+    }
+    .bottom-nav{
+        flex-direction: column;
+    }
+  }
+
+  /* <--- Navbar CSS ---> */
+
+  /* <--- small slider ---> */
+
+/* #container{
     margin-top: 40px;
 }
 #slider{
@@ -70,81 +167,12 @@
 }
 #slider{
     position: absolute;
-}
-.unav{
-    border: 1px solid black;
-    height: 70px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-.unav img{
-    width: 150px;
-    height: 100%;
-}
-.unav .search{
- border: 1px solid black;
- display: flex;
- width: 35rem;
- height: 42px;
- margin-top: 8px;
- justify-content: space-between;
- align-items: center;
- border-radius: 3px;
- border: none;
- background-color: rgb(205, 202, 202);
-}
-.unav #search{
-    width: 78%;
-    height: 100%;
-    border: none;
-    outline: none;
-    background-color: rgb(205, 202, 202) ;
-}
-.unav .title{
-    padding-left: 10px;
-}
-.unav i{
-    cursor: pointer;
-    padding-right: 20px;
-}
-.unav .signIn-text{
-    color: black;
-    font-weight: 500;
-}
-.lnav{
-    width: 70%;
-    height: 50px;
-    margin: auto;
-    background-color: #902735;
-    font-size: 15px; 
-    font-family: poppins;
-    font-weight: 600; 
-    display: grid;
-    grid-template-columns: repeat(6,1fr);
-    align-items: center;
-}
-.lnav a{
-    text-decoration: none;
-    color: #ffffff;
-}
-.lnav a:hover{
-    color: #902735;
-}
- .a{
-    height: 50px;
-    display: flex;
-    justify-content:center; 
-    align-items: center;
-    margin-left: 2px;
-}
- .a:hover{
-background-color: #f7ebeb;
- color: aqua;
-}
-.lnav-div{
-    background-color: #902735;
-}
+} */
+
+/* <--- small slider ---> */
+
+/* <--- Big Slider ---> */
+
 .slideshow-wrapper{
     border: 2px solid black;
     margin-top: 200px;
@@ -239,6 +267,9 @@ justify-content: center;
 #radio5:checked ~ .navigation-auto .auto-btn5{
     background: #40D3DC;
 }
+
+/* <--- Big Slider ---> */
+
 #grid-cont{
     margin: auto;
     margin-top: 50px;
