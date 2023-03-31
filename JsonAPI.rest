@@ -1,0 +1,70 @@
+GET  https://mock-api-json-server-ooya.onrender.com/Users
+
+###
+
+DELETE  https://mock-api-json-server-ooya.onrender.com/Users/13
+Content-Type: application/json
+###
+GET https://project-json-server-dkem.onrender.com/trackorder
+###
+DELETE   https://project-json-server-dkem.onrender.com/trackorder/1
+Content-Type: application/json
+
+###
+POST https://project-json-server-dkem.onrender.com/trackorder
+Content-Type: application/json
+
+{
+  "name":"AJIT",
+  "phone":1234567890,
+  "address":"At Post Salod (Hirapur) Tahluka & District Wardha, 442001",
+  "pinCode":431009,
+  "city":"kolkata",
+  "state":"West Bengal",
+  "item": "Intees Fashion Men's Premium Round Neck Olive Printed Cotton T-shirt (xl)",
+  "price":499,
+  "Current_location":"Angul",
+  "Previous_location":"Patna",
+  "Next_location":"kolkata"
+}
+
+###
+PATCH  https://mock-api-json-server-ooya.onrender.com/Users/8
+Content-Type: application/json
+
+{
+    
+    "username":"rutuja",
+    "password":"rutuja"
+}
+
+###
+POST https://mock-api-json-server-ooya.onrender.com/Users
+Content-Type: application/json
+
+ {
+    "username": "astha",
+    "password": "Astha@1432",
+    "firstname": "Astha",
+    "lastname": "gfhf",
+    "email": "astha@gmail.com"
+  }
+
+### filter by id
+GET https://mock-api-json-server-ooya.onrender.com/Users
+#fetch(`${baseUsl}`,{
+# method:"POST",
+# body:JSON.stringify(formdata),
+# headers:{
+#     "content-type":"application/json"
+# }, 
+# })
+# .then((res)=>{
+# return res.json();
+# })
+# .then((data)=>{
+# console.log(data)
+# myUserData.push(data)
+# }).catch((err)=>{
+#     console.log(err)
+# })

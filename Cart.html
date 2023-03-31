@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart page</title>
+    <link rel="stylesheet" href="./styles/cart.css">
+</head>
+<body>
+    <div id="wrapper">
+        <div id="discount">GET RS 50 OFF ON ORDERS ABOVE RS 100</div>
+        <div id="nav">
+            <div class="unav">
+                <div class="logo">
+                <img src="./1680019594609.jpg" alt="">
+            </div>
+             <div class="search">
+                <div class="title">SEARCH</div>
+                <input type="search" name="" id="search" placeholder="Search here for products in Kolkata">
+                <div class="search-icon">
+                    <i class="fa fa-search"></i>
+                </div>
+            </div>
+                <a href="" id="location"></a>
+                <a href="" id="signIn" style="padding: 13px 15px; text-decoration: none;">
+                    <span class="signIn-text"><i class="fa fa-user" style="font-size: 20px; margin-top: 7px;color: black;">
+                    </i>Sign In / Register</span>
+                <a href="">Wishlist</a>
+                <a href="">Cart</a>
+            </div>
+            <div class="lnav">
+                <a href="">Stores Near Me</a>
+                <a href="">Products Near Me</a>
+                <a href="">Fashion</a>
+                <a href="">Beauty & Personal Care</a>
+                <a href="">Home Decor</a>
+                <a href="">Electronics</a>
+            </div>
+        </div>
+        
+        
+    </div>
+
+    <div class="nav">
+        <div id="product-container">
+          <!-- Here Append All the cart Products  -->
+        </div>
+
+        <div class="checkout">
+          <h1>Order Sumary</h1>
+          <div class="details">
+            <div>
+              <div><p>Original Price</p></div>
+              <div id="originalprice">0</div>
+            </div>
+            <hr />
+            <div>
+              <div><p>Savings 5%</p></div>
+              <div id="savings">0</div>
+            </div>
+            <hr />
+            <div>
+              <div><p>Delivery charges</p></div>
+              <div id="delivery">Free</div>
+            </div>
+            <hr />
+            <div>
+              <div>Taxes 10%</div>
+              <div id="tax">0</div>
+            </div>
+            <hr />
+            <div>
+              <div>Total Price</div>
+              <div id="total">0</div>
+            </div>
+          </div>
+          <div id="check">
+            <button ><a href="./checkout.html"style="color:white" >Proceed TO checkout</a></button>
+          </div>
+        </div>
+      </div>
+</body>
+<script>
+    // Write all necessery JS here
+
+    let CartContainer = document.getElementById("product-container");
+
+    let Cart = JSON.parse(localStorage.getItem("cart")) || [];
+    console.log(Cart)
+    function DisplayProduct() {
+      let originalprice = document.getElementById("originalprice");
+      let savings = document.getElementById("savings");
+      let delivery = document.getElementById("delivery");
+      let tax = document.getElementById("tax");
+      let total = document.getElementById("total");
+
+      CartContainer.innerHTML = "";
+
+      Cart.forEach((product) => {
+        let Total=document.getElementById("cartTotal")
+          Total.innerText=Cart.length
+         
+        let image = document.createElement("img");
+        let details = document.createElement("p");
+        let price = document.createElement("h3");
+        let Remove = document.createElement("button");
+        let Increase = document.createElement("button");
+        let Decrease = document.createElement("button");
+        let card = document.createElement("div");
+        let quantity = document.createElement("span");
+
+        image.src = product.image;
+        details.textContent = product.title;
+        price.textContent = product.price;
+        Remove.textContent = "Remove";
+        Increase.textContent = "+";
+        Decrease.textContent = "-";
+        quantity.textContent = product.quantity;
+
+        Decrease.addEventListener("click", () => {
+          if (product.quantity > 1) {
+            product.quantity--;
+            localStorage.setItem("cart", JSON.stringify(Cart));
+            DisplayProduct();
+          }
+        });
+        Increase.addEventListener("click", () => {
+          product.quantity++;
+          localStorage.setItem("cart", JSON.stringify(Cart));
+          DisplayProduct();
+        });
+        Remove.addEventListener("click", () => {
+          Cart = Cart.filter((ele) => {
+            return ele.id !== product.id;       
+            location.reload()
+          });
+          
+          localStorage.setItem("cart", JSON.stringify(Cart));
+          DisplayProduct();
+          Swal.fire({
+              position: 'center',
+              icon: 'success',
+              title: 'Item Deleted from Cart',
+              showConfirmButton: false,
+              timer: 1500
+            })
+        });
+        card.append(
+          image,
+          price,
+          details,
+          Increase,
+          quantity,
+          Decrease,
+          Remove
+        );
+        CartContainer.append(card);
+      });
+
+      let sum = 0;
+      for (let i = 0; i < Cart.length; i++) {
+        sum += Math.floor(Cart[i].price * Cart[i].quantity); 
+      }
+      originalprice.textContent = sum;
+      savings.textContent = (sum * 0.05).toFixed(2);
+      delivery.textContent =(sum * 0.1).toFixed(2);
+      tax.textContent = (sum * 0.1).toFixed(2);
+
+
+      total.textContent = eval(Math.floor(sum - sum * 0.05 + sum * 0.1));
+
+    }
+
+    DisplayProduct();
+
+    // Write all necessery JS here
+
+    // localStorage.setItem("cart", JSON.stringify(Cart));
+    let user = document.querySelector(".signin");
+  user.onclick = () => {
+    location.href = "./login.html";
+  };
+  let order = document.querySelector(".orders");
+  order.onclick = () => {
+    location.href = "./wish.html";
+  };
+ 
+  let bag = document.querySelector(".bag");
+  bag.onclick = () => {
+    location.href = "./cart.html";
+  };
+
+  </script>
+</html>
