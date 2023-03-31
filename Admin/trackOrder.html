@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crafthub.com/trackorder/</title>
+    <link rel="stylesheet" href="/Admin/styles/trackorder.css">
+ <!-- <style>
+
+ </style> -->
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+ 
+
+</head>
+<body>
+    <div id="wrapper">
+        <div id="nav">
+            <div class="unav">
+                <div class="logo">
+                    <a href="/Admin/dashboard.html"><img src="/Admin/Logo/2.logo.jpg" alt=""></a>
+                    
+                </div>
+                <div class="search">
+                    <!-- <div class="title">SEARCH</div> -->
+                        <input type="search" name="" id="search" placeholder="Search here for products">
+                        <div class="search-icon">
+                            <i class="fa fa-search"></i>
+                        </div>
+                    </div>
+                    <a href="" id="location"></a>
+                    <a href="/Admin/Admin_signup.html" id="signIn" style="padding: 13px 15px; text-decoration: none;"></span>
+                    <span id="adminname" class="signIn-text"><i class="fa fa-user" style="font-size: 20px; margin-top: 7px;color: black;">
+                    </i>New Admin Registration</span>
+                    <a href=""></a>
+                    <a href=""></a>
+                </div>
+                <div class="lnav-div">
+                    <div class="lnav">
+                        <div class="a">
+                            <a href="/Admin/Admin_signup.html">Admin Registration</a>
+                        </div>
+                        <div class="a">
+                            <a href="">All Products</a>
+                        </div>
+                        <div class="a">
+                            <a href="">Fashion</a>
+                        </div>
+                        <div class="a">
+                            <a href="">Beauty Care</a>
+                        </div>
+                        <div class="a">
+                            <a href="">Home Decor</a>
+                        </div>
+                        <div class="a">
+                            <a href="">Electronics</a>
+                        </div>
+                        <div class="a">
+                            <a href="">Track All Orders</a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+</div>
+    <!-- <div id="navbar">
+        <a href="./index.html"><img src="./Images/Logos/Black.png"  alt="" ></a>
+        <a href="./1.Store.html">Store</a>
+        <a href="./mac.html">Mac</a>
+        <a href="./iPad.html">iPad</a>
+        <a href="./iphone.html">iPhone</a>
+        <a href="./watch.html">Watch</a>
+        <a href="./Airpod.html">AirPods</a>
+        <a href="./tv&home.html">TV & Home</a>
+        <a href="">Entertainment</a>
+        <a href="./assc.html">Accessories</a>
+        <a href="">Support</a>
+        <a href="./allproduct.html">All Products</a>        
+    </div> -->
+    <!-- <div id="modify"> -->
+        <!-- <div id="sort">
+          <select name="sorting" id="sorting">
+            <option value="">Select Sort for Name</option>
+            <option value="High">Ascending</option>
+            <option value="Low">Descending</option>
+          </select>
+        </div>
+        <div class="logo">
+            <a href="./index.html"><img src="./Images/Logos/Black.png" alt=""></a>
+        </div> -->
+        <!-- <div id="filter">
+          <input type="search"  id="Name" placeholder="Search">
+        </div>
+      </div> -->
+    <div id="container">
+         <!-- append data here -->
+    </div>
+</body>
+<script>
+
+// let locationArray=[
+// 			'Ahmednagar',
+// 			'Akola',
+// 			'Amravati',
+// 			'Bhandara',
+// 			'Beed',
+//             'Angul',
+//             'Aurangabad',
+//             'Wardha',
+// 			'Washim',
+// 			'Yavatmal',
+// 			'Boudh (Bauda)',
+// 			'Bhadrak',
+//             'Buldhana',
+// 			'Chandrapur',
+// 			'Dhule',
+// 			'Gadchiroli',
+// 			'Gondia',
+// 			'Hingoli',
+// 			'Jalgaon',
+// 			'Balangir',
+// 			'Bargarh (Baragarh)',
+// 			'Balasore',
+// 			'Cuttack',
+//             'Bastar',
+// 			'Bijapur',
+// 			'Bilaspur',
+// 			'Dantewada',
+// 			'Dhamtari',
+// 			'Durg',
+// 			'Jashpur',
+// 			'Janjgir-Champa',
+// 			'Korba',
+// 			'Koriya',
+// 			'Debagarh (Deogarh)',
+// 			'Dhenkanal',
+// 			'Ganjam',
+// 			'Gajapati',
+// 			'Jharsuguda',
+// 			'Jajpur',
+// 			'Jagatsinghpur',
+// 			'Khordha',
+// 			'Kendujhar (Keonjhar)',
+// 			'Kalahandi',
+// 			'Kandhamal',
+// 			'Koraput',
+// 			'Kendrapara',
+// 			'Malkangiri',
+// 			'Mayurbhanj',
+// 			'Nabarangpur',
+// 			'Nuapada',
+// 			'Nayagarh',
+// 			'Puri',
+// 			'Rayagada',
+// 			'Sambalpur',
+// 			'Subarnapur (Sonepur)',
+// 			'Sundergarh',
+// 			'Kolhapur',
+// 			'Latur',
+// 			'Mumbai City',
+// 			'Mumbai suburban',
+// 			'Nandurbar',
+// 			'Nanded',
+// 			'Nagpur',
+// 			'Nashik',
+// 			'Osmanabad',
+// 			'Parbhani',
+// 			'Pune',
+// 			'Raigad',
+//             'Dhenkanal',
+// 			'Ganjam',
+// 			'Gajapati',
+// 			'Jharsuguda',
+// 			'Jajpur',
+// 			'Jagatsinghpur',
+// 			'Khordha',
+// 			'Kendujhar (Keonjhar)',
+// 			'Kalahandi',
+// 			'Kandhamal',
+// 			'Koraput',
+// 			'Kendrapara',
+// 			'Malkangiri',
+// 			'Mayurbhanj',
+// 			'Nabarangpur',
+// 			'Nuapada',
+// 			'Ratnagiri',
+// 			'Sindhudurg',
+// 			'Sangli',
+// 			'Solapur',
+// 			'Satara',
+// 			'Thane',
+// 		];
+</script>
+<script src="/Admin/script/trackorder.js"></script>
+</html>

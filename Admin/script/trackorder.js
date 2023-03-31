@@ -6,7 +6,7 @@ const trackOrder=`${BaseUrl}/trackorder`;
 // Declaring Variables catching them form HTML page here...
 
 var container=document.getElementById("container");
-var searchBar=document.getElementById("search");
+var searchBar=document.querySelector(".search>input");
 
 // fetching data on window load
 
@@ -31,7 +31,7 @@ function fetchData(){
     })
     .then((data)=>{
     console.log(data)
-    globalOrderArray.push(data)
+    globalOrderArray=data
     getCardList(data)
     })
 }
@@ -119,48 +119,24 @@ function getCard(name,mobile,address,city,pinCode,item,Previous_location,Current
     return card;
 };
 
-//pending
+//  search bar working for name,item buy, pincode, mobile number & city name.
 
 searchBar.addEventListener("search",function(){
     // console.log(searchBar.value);
     if(searchBar.value==="")
     {
-        fetchData();
+        // fetchData()
+        getCardList(globalOrderArray)
     }else{
         let searchResult=globalOrderArray.filter((element,index)=>{
-            let i=0;
-            // while(i<globalOrderArray.length)
+            if(searchBar.value==element.name||searchBar.value==element.firstname||searchBar.value==element.city||searchBar.value==element.phone||searchBar.value==element.city||searchBar.value==element.pinCode||searchBar.value==element.item)
             {
-                console.log(i);
-            if(searchBar.value===element[i].name||searchBar.value===element.firstname||searchBar.value===element.phone||searchBar.value===element.city||searchBar.value===element.pinCode||searchBar.value===element.item)
-            {
-                // return true;
-                console.log(element[i].name)
+                return true;
+                console.log(element.name)
             }
-            }
-            // console.log(element[].name)
+            // console.log(element)
         });
         // console.log(searchResult)
-        // getCardList(searchResult);
+        getCardList(searchResult);
     }
-})
-// let filterCategory=document.querySelector("#filter>input");
-
-// let searchInput=document.getElementById("Name");
-
-// filterCategory.addEventListener("search",function(){
-//     if(filterCategory.value==="")
-//     {
-//         display(trackOrder)
-//     }
-//     else
-//     {
-//     let searchName=trackOrder.filter(function(element,index){
-//         if(filterCategory.value==element.name||filterCategory.value==element.mobile||filterCategory.value==element.pinCode||filterCategory.value==element.buy_Item)
-//         {
-//             return true;
-//         }
-//     })
-//     display(searchName)
-// }
-// })
+});

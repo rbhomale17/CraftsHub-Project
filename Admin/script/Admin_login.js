@@ -18,7 +18,7 @@ function fetchData(){
     return res.json();
 })
 .then((data)=>{
-    // console.log(data);
+    console.log(data);
     adminArray.push(data)
     usernameResult = validationUserName(data);
     passwordResult = validationPassword(data);
@@ -99,7 +99,7 @@ function setUser(data){
 // redirecting to dashboard
 
 function redirect(){
-    location.href="/Admin_ssp.html"
+    location.href="/Admin/Admin_dashboard/dashboard.html"
 }
 
 
