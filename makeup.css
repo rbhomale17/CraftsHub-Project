@@ -15,7 +15,7 @@
     border: 1px solid black;
     text-align: center;
     font-family: Muli;
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 700px;
     color: rgb(156,0,0);
 }
@@ -37,7 +37,7 @@
 }
 #navdar-logo-img>img{
     /* border: 1px solid red; */
-    width: 90px;
+    width: 200px;
     padding-left: 20px;
 }
 #search-product{
@@ -89,6 +89,10 @@
     background-color: rgb(156,0,0);
 }
 .links-div{
+    width: 90%;
+    margin: auto;
+}
+.links-div ul{
     width: 70%;
     display: flex;
     justify-content: space-between;
@@ -97,5 +101,60 @@
 }
 .links-div a{
     text-decoration: none;
+    color:white;
 }
-/* abc */
+.links-div ul li {
+    list-style-type: none;
+}
+/* .links-div:hover{
+    background-color: white;
+} */
+
+#container{
+    width: 100%;
+    display:flex;
+    margin: auto;
+    margin-top: 50px;
+    line-height: 30px;
+}
+#filter-div{
+    width: 300px;
+    border: 2px solid red;
+}
+#product-div{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin: auto;
+}
+#product-div>div{
+    width: 250px;
+}
+#product-div>div img{
+    width: 250px;
+}
+#product-div>div button{
+    width: 250px;
+    height: 30px;
+    background-color: rgb(156,0,0);
+    border: none;
+    border-radius: 3px;
+    color: white;
+}
+#pagination-wrapper{
+    /* border: 2px solid red; */
+    width :30%;
+    padding-left: 40px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+#pagination-wrapper button{
+    margin-top: 30px;
+   height: 40px;
+   width: 40px;
+  background-color: rgb(156,0,0);
+  border: none;
+  border-radius: 3px;
+  color: white;
+}

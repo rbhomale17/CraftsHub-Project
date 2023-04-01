@@ -1,5 +1,5 @@
 function fetchdata(page,limit){
-    fetch(`https://project-json-server-dkem.onrender.com/fashionProduct?_page=${page}&_limit=${limit}`)
+    fetch(`https://project-json-server-dkem.onrender.com/makeup?_page=${page}&_limit=${limit}`)
     .then((res)=>res.json())
     .then((data)=>{
     //    console.log(data)
