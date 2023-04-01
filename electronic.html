@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronics</title>
+    <link rel="stylesheet" href="./electronic.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>              
+<body>
+    <div id="wrapper">
+         <!-- NAVBAR -->
+
+        <div id="discount">GET RS 50 OFF ON ORDERS ABOVE RS 100</div>
+        <nav class="navbar">
+            <div class="top-nav">
+               <div class="logo">
+                 <img src="./2.logos.jpg" alt="">
+               </div>
+               <div class="search-bar">
+                 <div class="title">SEARCH</div>
+                 <input type="search" name="" id="search" placeholder="Search here for products in Kolkata">
+                 <div class="search-icon">
+                     <i class="fa fa-search"></i>
+                 </div>
+               </div>
+               <div class="nav-buttons">
+                 <a href="./sign.html" id="sign-in"><i class="fa fa-user"></i> Sign In / Register</a>
+                 <a href="#"> <i class="fa-regular fa-heart"></i> Wishlist</a>
+                 <a href="#"> <i class="fa-solid fa-cart-shopping"></i>Cart</a>
+               </div>
+             </div>
+             <div class="bottom-nav">
+               <a href="#">Stores Near Me</a>
+               <a href="#">All Products</a>
+               <a href="#">Fashion</a>
+               <a href="#">Beauty & Personal Care</a>
+               <a href="#">Home Decor</a>
+               <a href="">Electronics</a>
+            </div>
+        </nav>
+
+    </div>
+    <div id="container">
+        <div class="sort-by">
+            <label for="sort-by-select">Sort By:</label>
+            <select id="sort-by-select" onchange="fetchdata(1, 8, this.value)">
+              <option value="">Sorting</option>
+              <option value="low-to-high">Price: Low to High</option>
+              <option value="high-to-low">Price: High to Low</option>
+            </select>
+        </div>
+        <hr vertical="true">
+        <div id="product-div"></div>
+    </div>
+        
+    <div class="pagination-wrapper" id="pagination-wrapper"></div>
+    <div id="f-main">
+        <footer>
+       <div class="f-cont">
+        <div class="f-row">
+        <div class="col" id="about">
+            <h3>About Us</h3>
+            <p>India's most convenient online grocery channel Buyerapp Fresh and Smart makes your grocery shopping even simpler. We offer you the convenience of shopping for everything that you need for your home - be it fresh fruits & vegetables, rice, dals, oil, packaged food, dairy item, frozen, pet food, household cleaning items & personal care products from a single virtual store.</p>
+           <div class="s-media">
+             <a href=""><i class="fa fa-facebook"></i></a>
+             <a href=""><i class="fa fa-instagram"></i></a>
+             <a href=""><i class="fa fa-twitter"></i></a>
+             <a href=""><i class="fa fa-youtube"></i></a>
+           </div>
+        </div>
+        <div class="col" id="company">
+            <h3>OUR COMPANY</h3>
+            <div class="link">
+                <a href="">About Us</a>
+                <a href="">Contact Us</a>
+            </div>
+        </div>
+        <div class="col" id="category">
+            <h3>TOP CATEGORIES</h3>
+            <div class="link">
+                <a href="">Fashion</a>
+                <a href="">Electronics</a>
+                <a href="">Grocery</a>
+            </div>
+        </div>
+        <div class="col" id="policy">
+            <h3>POLICIES & INFO</h3>
+            <div class="link">
+                <a href="">Privacy Policy</a>
+                <a href="">SUPPORT</a>
+                <a href="">For Help, email to care@craftsvilla.com</a>
+            </div>
+        </div>
+        </div>
+       </div>
+        </footer>
+    </div>
+  
+    
+</body>
+</html>
+<script src="./electronic.js"></script>                
+                 
+                
