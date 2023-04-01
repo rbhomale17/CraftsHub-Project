@@ -8,6 +8,7 @@
     <title>Homepage</title>
     <link rel="stylesheet" href="/Admin/styles/dashboard_navbar.css">
     <link rel="stylesheet" href="/Admin/styles/dashboard.css">
+    <link rel="stylesheet" href="/Admin/styles/home_decor.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
@@ -28,7 +29,7 @@
                     </div>
                 </div>
                 <a href="" id="location"></a>
-                <a id="signIn" style="padding: 13px 15px; text-decoration: none;"></span>
+                <a href="" id="signIn" style="padding: 13px 15px; text-decoration: none;"></span>
                     <span class="signIn-text"><i class="fa fa-user"
                             style="font-size: 20px; margin-top: 7px;color: black;">
                         </i><span id="adminname"></span></span>
@@ -49,7 +50,7 @@
                     <div class="a">
                         <a href="/Admin/beuty.html">Beauty Care</a>
                     </div>
-                    <div class="a">
+                    <div id="special" class="a">
                         <a href="/Admin/home_decor.html">Home Decor</a>
                     </div>
                     <div class="a">
@@ -62,42 +63,20 @@
             </div>
         </div>
     </div>
-    <div id="main">
-        <div id="dashboard">
-            <div id="gridboxex">
-                <div>
-                    <div>
-                        <img src="https://www.svgrepo.com/show/375047/product-service-campaign.svg" alt="">
-                        <h2>Products</h2>
-                        <h2 id="productscount"></h2>
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <img src="https://www.svgrepo.com/show/472886/users.svg" alt="">
-                        <h2>Users</h2>
-                        <h2 id="localusercount"></h2>
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <img src="https://www.svgrepo.com/show/41173/admin-with-cogwheels.svg" alt="">
-                        <h2>Admins</h2>
-                        <h2 id="admincount"></h2>
-                    </div>
-
-                </div>
-                <div>
-                    <div>
-                        <img src="https://www.svgrepo.com/show/448030/income-amount.svg" alt="">
-                        <h2>Income</h2>
-                        <h2 id="incomecount"></h2>
-                    </div>
-                </div>
+    <div id="container">
+        <!-- <div id="filter-div">
+            <div id="filter">
+                <select name="filter" id="selectFilter">
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
             </div>
-        </div>
+        </div> -->
+        <div id="product-div"></div>
     </div>
-    </div>
+    <div class="pagination-wrapper" id="pagination-wrapper"></div>
     <!-- FOOTER -->
 
     <div id="f-main">
@@ -148,6 +127,6 @@
 
     <!-- FOOTER -->
 </body>
-<script src="/Admin/script/dashboard.js"></script>
+<script src="/Admin/script//home_decor.js"></script>
 
 </html>

@@ -1,68 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crafthub.com/trackorder/</title>
     <link rel="stylesheet" href="/Admin/styles/trackorder.css">
- <!-- <style>
+    <!-- <style>
 
  </style> -->
-     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
- 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
 
 </head>
+
 <body>
     <div id="wrapper">
         <div id="nav">
             <div class="unav">
                 <div class="logo">
                     <a href="/Admin/dashboard.html"><img src="/Admin/Logo/2.logo.jpg" alt=""></a>
-                    
                 </div>
                 <div class="search">
                     <!-- <div class="title">SEARCH</div> -->
-                        <input type="search" name="" id="search" placeholder="Search here for products">
-                        <div class="search-icon">
-                            <i class="fa fa-search"></i>
-                        </div>
-                    </div>
-                    <a href="" id="location"></a>
-                    <a href="/Admin/Admin_signup.html" id="signIn" style="padding: 13px 15px; text-decoration: none;"></span>
-                    <span id="adminname" class="signIn-text"><i class="fa fa-user" style="font-size: 20px; margin-top: 7px;color: black;">
-                    </i>New Admin Registration</span>
-                    <a href=""></a>
-                    <a href=""></a>
-                </div>
-                <div class="lnav-div">
-                    <div class="lnav">
-                        <div class="a">
-                            <a href="/Admin/Admin_signup.html">Admin Registration</a>
-                        </div>
-                        <div class="a">
-                            <a href="">All Products</a>
-                        </div>
-                        <div class="a">
-                            <a href="">Fashion</a>
-                        </div>
-                        <div class="a">
-                            <a href="">Beauty Care</a>
-                        </div>
-                        <div class="a">
-                            <a href="">Home Decor</a>
-                        </div>
-                        <div class="a">
-                            <a href="">Electronics</a>
-                        </div>
-                        <div class="a">
-                            <a href="">Track All Orders</a>
-                        </div>
+                    <input type="search" name="" id="search" placeholder="Search here for products">
+                    <div class="search-icon">
+                        <i class="fa fa-search"></i>
                     </div>
                 </div>
+                <a href="" id="location"></a>
+                <a href="" id="signIn" style="padding: 13px 15px; text-decoration: none;"></span>
+                    <span class="signIn-text"><i class="fa fa-user"
+                            style="font-size: 20px; margin-top: 7px;color: black;">
+                        </i><span id="adminname"></span></span>
+                    <a id="LogOut">Logout</a>
+                    <a href=""></a>
+            </div>
+            <div class="lnav-div">
+                <div class="lnav">
+                    <div class="a">
+                        <a href="/Admin/Admin_signup.html">Admin Registration</a>
+                    </div>
+                    <div class="a">
+                        <a href="/Admin/Add_product.html">Add Products</a>
+                    </div>
+                    <div class="a">
+                        <a href="/Admin/Fashion.html">Fashion</a>
+                    </div>
+                    <div class="a">
+                        <a href="/Admin/beuty.html">Beauty Care</a>
+                    </div>
+                    <div class="a">
+                        <a href="/Admin/home_decor.html">Home Decor</a>
+                    </div>
+                    <div  class="a">
+                        <a href="/Admin/Electronics.html">Electronics</a>
+                    </div>
+                    <div id="special" class="a">
+                        <a href="/Admin/trackOrder.html">Track All Orders</a>
+                    </div>
+                </div>
+            </div>
         </div>
-</div>
+    </div>
     <!-- <div id="navbar">
         <a href="./index.html"><img src="./Images/Logos/Black.png"  alt="" ></a>
         <a href="./1.Store.html">Store</a>
@@ -78,7 +80,7 @@
         <a href="./allproduct.html">All Products</a>        
     </div> -->
     <!-- <div id="modify"> -->
-        <!-- <div id="sort">
+    <!-- <div id="sort">
           <select name="sorting" id="sorting">
             <option value="">Select Sort for Name</option>
             <option value="High">Ascending</option>
@@ -88,13 +90,63 @@
         <div class="logo">
             <a href="./index.html"><img src="./Images/Logos/Black.png" alt=""></a>
         </div> -->
-        <!-- <div id="filter">
+    <!-- <div id="filter">
           <input type="search"  id="Name" placeholder="Search">
         </div>
       </div> -->
     <div id="container">
-         <!-- append data here -->
+        <!-- append data here -->
     </div>
+    <div class="pagination-wrapper" id="pagination-wrapper"></div>
+    <!-- FOOTER -->
+
+    <div id="f-main">
+        <footer>
+            <div class="f-cont">
+                <div class="f-row">
+                    <div class="col" id="about">
+                        <h3>About Us</h3>
+                        <p>India's most convenient online grocery channel Buyerapp Fresh and Smart makes your grocery
+                            shopping even simpler. We offer you the convenience of shopping for everything that you need
+                            for your home - be it fresh fruits & vegetables, rice, dals, oil, packaged food, dairy item,
+                            frozen, pet food, household cleaning items & personal care products from a single virtual
+                            store.</p>
+                        <div class="s-media">
+                            <a href=""><i class="fa fa-facebook"></i></a>
+                            <a href=""><i class="fa fa-instagram"></i></a>
+                            <a href=""><i class="fa fa-twitter"></i></a>
+                            <a href=""><i class="fa fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="col" id="company">
+                        <h3>OUR COMPANY</h3>
+                        <div class="link">
+                            <a href="">About Us</a>
+                            <a href="">Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="col" id="category">
+                        <h3>TOP CATEGORIES</h3>
+                        <div class="link">
+                            <a href="">Fashion</a>
+                            <a href="">Electronics</a>
+                            <a href="">Grocery</a>
+                        </div>
+                    </div>
+                    <div class="col" id="policy">
+                        <h3>POLICIES & INFO</h3>
+                        <div class="link">
+                            <a href="">Privacy Policy</a>
+                            <a href="">SUPPORT</a>
+                            <a href="">For Help, email to care@craftsvilla.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- FOOTER -->
 </body>
 <script>
 
@@ -192,4 +244,5 @@
 // 		];
 </script>
 <script src="/Admin/script/trackorder.js"></script>
+
 </html>
