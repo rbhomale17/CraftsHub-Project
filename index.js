@@ -30,7 +30,3 @@ sign_in.innerText = f_name[f_name.length-1];
 
 
 
-
-
-
-

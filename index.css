@@ -68,11 +68,12 @@
   }
   /* Style the logo */
   .logo{
+    width: 200px;
+    height: 40px;
     margin-left: 30px;
   }
   .logo img{
-   width: 200px;
-   height: 60px;
+   width: 80%;
   }
   /* Style the search bar */
   .search-bar {
@@ -146,28 +147,18 @@ display: flex;
 
   /* <--- small slider ---> */
 
-/* #container{
-    margin-top: 40px;
-}
-#slider{
-    max-width: 1600px;
-}
-#slider .images{
-    cursor: pointer;
-    white-space: nowrap;
-    overflow: hidden;
-}
-#slider img{
-    height: 180px;
-    width: calc(100%/5);
-    object-fit: cover;
-}
-#slider img:first-child{
-    margin-left: 0px;
-}
-#slider{
-    position: absolute;
-} */
+  .main-carousel{
+    margin-top: 30px;
+  }
+  .carousel-cell{
+  width: 20%;
+  height: 200px;
+  }
+  .carousel-cell img{
+    width: 100%;
+    height: 200px;
+  }
+
 
 /* <--- small slider ---> */
 
@@ -175,20 +166,20 @@ display: flex;
 
 .slideshow-wrapper{
     border: 2px solid black;
-    margin-top: 200px;
-    height: 400px;
+    margin-top: 40px;
+    height: 450px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .slideshow{
     width: 100%;
-    height: 400px;
+    height: 450px;
     overflow: hidden;
 }
 .slides{
     width: 500%;
-    height: 400px;
+    height: 450px;
     display: flex;
 }
 .slides input{
@@ -200,12 +191,13 @@ display: flex;
 }
 .slide img{
     width: 100%;
-    height: 400px;
+    height: 450px;
 }
 .navigation-manual{
 position: absolute;
 width: 100%;
 display: flex;
+margin-top: 10px;
 justify-content: center;
 }
 .manual-btn{
@@ -241,7 +233,7 @@ justify-content: center;
     display: flex;
     width: 100%;
     justify-content: center;
-    margin-top: 400px;
+    margin-top: 460px;
 }
 .navigation-auto div{
     border: 2px solid #40D3DC;
@@ -253,21 +245,46 @@ justify-content: center;
     margin-right: 40px;
 }
 #radio1:checked ~ .navigation-auto .auto-btn1{
-    background: #40D3DC;
+    background: #ffffff;
 }
 #radio2:checked ~ .navigation-auto .auto-btn2{
-    background: #40D3DC;
+    background: #ffffff;
 }
 #radio3:checked ~ .navigation-auto .auto-btn3{
-    background: #40D3DC;
+    background: #ffffff;
 }
 #radio4:checked ~ .navigation-auto .auto-btn4{
-    background: #40D3DC;
+    background: #ffffff;
 }
 #radio5:checked ~ .navigation-auto .auto-btn5{
-    background: #40D3DC;
+    background: #ffffff;
 }
 
+.slide-bottom{
+    display: flex;
+    background-color: #000000;
+    justify-content: space-around;
+    padding-top: 80px;
+    padding-bottom: 40px;
+}
+.slide-bottom .b-card{
+    border: 2px solid black;
+    width: 15%;
+    font-size: 13px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+}
+
+.b-card .b-image{
+    width: 80px;
+}
+
+.b-card img{
+    width: 100%;
+    height: 60px;
+    padding: 10px;
+}
 /* <--- Big Slider ---> */
 
 #grid-cont{
