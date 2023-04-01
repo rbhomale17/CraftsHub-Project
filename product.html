@@ -78,6 +78,17 @@
         </div>
         
     </div>
+    <div class="sort-by">
+        <label for="sort-by-select">Sort By:</label>
+        <select id="sort-by-select">
+          <option value="popularity">Popular</option>
+          <option value="price-low-to-high">Price: Low to High</option>
+          <option value="price-high-to-low">Price: High to Low</option>
+          <option value="discount">Discount</option>
+          <option value="new-arrivals">New Arrivals</option>
+        </select>
+      </div>
+
     <div id="productpage">
        
     </div>
@@ -103,5 +114,5 @@
 })
 .catch(error => console.error(error));
 </script> -->
-<script src="/product.js"></script>
+<script src="./product.js"></script>
 </html>
