@@ -114,6 +114,8 @@
     width: 100%;
     display:flex;
     margin: auto;
+    margin-top: 50px;
+    line-height: 30px;
 }
 #filter-div{
     width: 300px;
@@ -133,4 +135,26 @@
 }
 #product-div>div button{
     width: 250px;
+    height: 30px;
+    background-color: rgb(156,0,0);
+    border: none;
+    border-radius: 3px;
+    color: white;
+}
+#pagination-wrapper{
+    /* border: 2px solid red; */
+    width :30%;
+    padding-left: 40px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+#pagination-wrapper button{
+    margin-top: 30px;
+   height: 40px;
+   width: 40px;
+  background-color: rgb(156,0,0);
+  border: none;
+  border-radius: 3px;
+  color: white;
 }
