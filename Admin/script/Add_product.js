@@ -1,5 +1,5 @@
-const BaseUrl="https://project-json-server-dkem.onrender.com";
-const ProductUrl=`${BaseUrl}/`
+const BaseUrl = "https://project-json-server-dkem.onrender.com";
+const ProductUrl = `${BaseUrl}/`
 
 // let firstnameError=document.getElementById("firstname-error")
 // let lastnameError=document.getElementById("lastname-error")
@@ -21,7 +21,7 @@ const ProductUrl=`${BaseUrl}/`
 //     }
 //     firstnameError.innerHTML='<i class="fas fa-check-circle"></i>';
 //     return true;
-    
+
 // }
 
 //validation for last name from input
@@ -87,12 +87,12 @@ const ProductUrl=`${BaseUrl}/`
 //     }
 // }
 //submit event created here
-    // var Submitbutton=document.getElementById("Submit");
-    // Submitbutton.addEventListener("click",function(e){
-    //     e.preventDefault();
-    //     validateSubmit()
-    // })
-    
+// var Submitbutton=document.getElementById("Submit");
+// Submitbutton.addEventListener("click",function(e){
+//     e.preventDefault();
+//     validateSubmit()
+// })
+
 // posting new Admin user data to server 
 //     function setUser(){
 //         let newAdminObject={
@@ -141,39 +141,39 @@ const ProductUrl=`${BaseUrl}/`
 
 
 
-var productname=document.getElementById("productname");
-var imageUrl=document.getElementById("imageUrl");
-var productPrice=document.getElementById("productPrice");
-var selectCategory=document.getElementById("category");
-var SubmitProduct=document.getElementById("Submit");
+var productname = document.getElementById("productname");
+var imageUrl = document.getElementById("imageUrl");
+var productPrice = document.getElementById("productPrice");
+var selectCategory = document.getElementById("category");
+var SubmitProduct = document.getElementById("Submit");
 
-SubmitProduct.addEventListener("click",function(e){
+SubmitProduct.addEventListener("click", function (e) {
     e.preventDefault()
-    let newProduct={
-        "name":productname.value,
-        "image":imageUrl.value,
-        "price":+productPrice.value
+    let newProduct = {
+        "name": productname.value,
+        "image": imageUrl.value,
+        "price": +productPrice.value
     }
     // console.log(newProduct)
-    fetch(`${ProductUrl}${selectCategory.value}`,{
-        method:"POST",
-        body:JSON.stringify(newProduct),
-        headers:{
-            "Content-Type":"application/json"
+    fetch(`${ProductUrl}${selectCategory.value}`, {
+        method: "POST",
+        body: JSON.stringify(newProduct),
+        headers: {
+            "Content-Type": "application/json"
         }
     })
-    .then((res)=>{
-        return res.json();
-    })
-    .then((data)=>{
-        console.log(data)
-        alert(`${productname.value} is Added.`,onclick=redirect())
-    })
+        .then((res) => {
+            return res.json();
+        })
+        .then((data) => {
+            console.log(data)
+            alert(`${productname.value} is Added.`, onclick = redirect())
+        })
 })
 
-function redirect(){
-        location.href="/Admin/dashboard.html"
-    }
+function redirect() {
+    location.href = "/Admin/dashboard.html"
+}
 // productname.;
 // imageUrl.value="";
 // productPrice.value="";

@@ -1,0 +1,37 @@
+# json-server creating Documentation link is present below on line no. 3 & 4
+
+# https://abduljabbarpeer.notion.site/Deploying-JSON-Server-on-render-com-Heroku-Alternative-2caf242350d84941b87ba98f5d2e4376
+# https://masai-course.s3.ap-south-1.amazonaws.com/material/videos/42324/dgbzQh58GgwkrnqkE2JvCLxEQyE3zkduAgpn1GAi.mp4
+
+### https://render.com/ is used to build the json-server using Node server
+
+### Dashbord link is given below
+# https://dashboard.render.com/
+
+### URL For Products is https://project-json-server-dkem.onrender.com
+
+### URL For Users Side is https://mock-api-json-server-ooya.onrender.com
+
+### For trackorder
+GET https://project-json-server-dkem.onrender.com/trackorder
+###
+
+### For Electronic Products
+GET https://project-json-server-dkem.onrender.com/Electronics
+###
+
+### For Fashion Product
+GET https://project-json-server-dkem.onrender.com/fashionProduct
+###
+
+### For Home Decor Products
+GET https://project-json-server-dkem.onrender.com/home_decor
+###
+
+### For Admin Users
+GET https://mock-api-json-server-ooya.onrender.com/Users
+###
+
+### For Local Users ( Customers )
+GET https://mock-api-json-server-ooya.onrender.com/localUsers
+###
