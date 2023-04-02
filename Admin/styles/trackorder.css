@@ -42,6 +42,7 @@ body {
 #wrapper {
     display: flex;
     flex-direction: column;
+    position: sticky;
 }
 
 #discount {
@@ -130,7 +131,7 @@ body {
     width: 150px;
     height: 100%;
 }
-
+ 
 .unav .search {
     border: 1px solid black;
     display: flex;
