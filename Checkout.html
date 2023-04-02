@@ -78,4 +78,109 @@
       </div>
 
 </body>
+<script>
+  // Write all necessery JS here
+
+  let CartContainer = document.getElementById("product-container");
+
+  let Cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  function DisplayProduct() {
+    let originalprice = document.getElementById("originalprice");
+    let savings = document.getElementById("savings");
+    let delivery = document.getElementById("delivery");
+    let tax = document.getElementById("tax");
+    let total = document.getElementById("total");
+
+    CartContainer.innerHTML = "";
+
+    Cart.forEach((product) => {
+      let image = document.createElement("img"); 
+      let details = document.createElement("p");
+      let price = document.createElement("h3");
+      let Remove = document.createElement("button");
+      let Increase = document.createElement("button");
+      let Decrease = document.createElement("button");
+      let card = document.createElement("div");
+      let quantity = document.createElement("span");
+
+      image.src = product.image;
+      details.textContent = product.title;
+      price.textContent = product.price;
+      Remove.textContent = "Remove";
+      Increase.textContent = "+";
+      Decrease.textContent = "-";
+      quantity.textContent = product.quantity;
+
+      Decrease.addEventListener("click", () => {
+        if (product.quantity > 1) {
+          product.quantity--;
+          localStorage.setItem("cart", JSON.stringify(Cart));
+          DisplayProduct();
+        }
+      });
+      Increase.addEventListener("click", () => {
+        product.quantity++;
+        localStorage.setItem("cart", JSON.stringify(Cart));
+        DisplayProduct();
+      });
+      Remove.addEventListener("click", () => {
+        Cart = Cart.filter((ele) => {
+          return ele.id !== product.id;
+        });
+        localStorage.setItem("cart", JSON.stringify(Cart));
+        DisplayProduct();
+      });
+      card.append(
+        image,
+        details,
+        price,
+        Increase,
+        quantity,
+        Decrease,
+        Remove
+      );
+      CartContainer.append(card);
+    });
+
+    let sum = 0;
+    for (let i = 0; i < Cart.length; i++) {
+      sum += Cart[i].price * Cart[i].quantity;
+    }
+    originalprice.textContent = Math.floor(sum);
+      savings.textContent = Math.floor(sum * 0.05);
+      delivery.textContent = sum;
+      tax.textContent = Math.floor(sum * 0.1);
+
+      total.textContent = eval(Math.floor(sum - sum * 0.05 + sum * 0.1));
+    }
+
+  DisplayProduct();
+
+
+
+
+
+
+  let Total = document.getElementById("cartTotal");
+  Total.innerText = Cart.length
+
+
+  let user = document.querySelector(".signin");
+  user.onclick = () => {
+    location.href = "./login.html";
+  };
+  let order = document.querySelector(".orders");
+  order.onclick = () => {
+    location.href = "./wish.html";
+  };
+
+  let bag = document.querySelector(".bag");
+  bag.onclick = () => {
+    location.href = "./cart.html";
+  };
+
+  // Write all necessery JS here
+</script>
+
 </html>

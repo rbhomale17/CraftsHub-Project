@@ -94,10 +94,10 @@
 
       Cart.forEach((product) => {
         let Total=document.getElementById("cartTotal")
-          Total.innerText=Cart.length
+          // Total.innerText=Cart.length
          
         let image = document.createElement("img");
-        let details = document.createElement("p");
+        let name = document.createElement("p");
         let price = document.createElement("h3");
         let Remove = document.createElement("button");
         let Increase = document.createElement("button");
@@ -106,7 +106,7 @@
         let quantity = document.createElement("span");
 
         image.src = product.image;
-        details.textContent = product.title;
+        name.textContent = product.name;
         price.textContent = product.price;
         Remove.textContent = "Remove";
         Increase.textContent = "+";
@@ -144,7 +144,7 @@
         card.append(
           image,
           price,
-          details,
+          name,
           Increase,
           quantity,
           Decrease,
@@ -172,19 +172,19 @@
     // Write all necessery JS here
 
     // localStorage.setItem("cart", JSON.stringify(Cart));
-    let user = document.querySelector(".signin");
-  user.onclick = () => {
-    location.href = "./login.html";
-  };
-  let order = document.querySelector(".orders");
-  order.onclick = () => {
-    location.href = "./wish.html";
-  };
+  //   let user = document.querySelector(".signin");
+  // user.onclick = () => {
+  //   location.href = "./login.html";
+  // };
+  // let order = document.querySelector(".orders");
+  // order.onclick = () => {
+  //   location.href = "./wish.html";
+  // };
  
-  let bag = document.querySelector(".bag");
-  bag.onclick = () => {
-    location.href = "./cart.html";
-  };
+  // let bag = document.querySelector(".bag");
+  // bag.onclick = () => {
+  //   location.href = "./cart.html";
+  // };
 
   </script>
 </html>
