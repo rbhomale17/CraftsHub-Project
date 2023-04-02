@@ -1,7 +1,8 @@
-/* #wrapper{
+ #wrapper{
     display: flex;
     flex-direction: column;
-}
+} 
+/*
 #discount{
     border: 1px solid #000000;
     background-color: #ffffff;
@@ -62,7 +63,12 @@
 
 
 
-
+body{
+  font-family: poppins;
+}
+/* #sign-in{
+  font-size: 19px;
+} */
 .nav{
     /* border: solid; */
     display: flex;
@@ -190,7 +196,7 @@
     #discount{
       border: 1px solid #000000;
       background-color: #ffffff;
-      height: 40px;
+      height: 30px;
       font-family: Muli;
       font-size: 15px; 
       font-weight: 700; 
@@ -260,7 +266,7 @@
    margin-left: -20%;
    width: 30%;
    height: 42px;
-   padding: 15px;
+   /* padding: 15px; */
    justify-content: space-between;
    align-items: center;
    border-radius: 3px;
@@ -307,6 +313,8 @@
       background-color: rgb(245, 239, 230);
       color: #902735;
       }
+
+      
     /* Media query for responsive design */
     @media screen and (max-width: 1020px){
   .search-bar{

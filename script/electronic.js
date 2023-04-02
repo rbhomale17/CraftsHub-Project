@@ -84,3 +84,55 @@ document.getElementById('pagination-wrapper').innerHTML = buttons.join('');
 }
 fetchdata(1,12)
 paginationButton(50,12)
+
+
+// user infi=ormationn 
+
+let search = document.getElementById("search");
+let search_btn = document.getElementById("search-btn");
+
+search_btn.addEventListener("click", function(){
+  console.log(search.value.toUpperCase() == "FASHION");
+  if(search.value.toUpperCase() == "PRODUCT"){
+    // window.open("product.html")
+    location.href="/product.html"
+  }
+  if(search.value.toUpperCase() == "FASHION"){
+    // window.open("fashion.html")
+    location.href="/fashion.html"
+    // redirect();
+  }
+  if(search.value.toUpperCase() == "BEAUTY"){
+    // window.open("makeup.html")
+    location.href="/makeup.html"
+  }
+  search.value = "";
+})
+// function redirect(){
+//   location.href="/fashion.html";
+// }
+
+
+search.addEventListener("search", function(){
+  if(search.value.toUpperCase() == "PRODUCT"){
+    // window.open("product.html")
+    location.href="/product.html"
+  }
+  if(search.value.toUpperCase() == "FASHION"){
+    // window.open("fashion.html")
+    location.href="/fashion.html"
+  }
+  if(search.value.toUpperCase() == "BEAUTY"){
+    // window.open("makeup.html")
+    location.href="/product.html"
+  }
+  search.value = "";
+})
+
+    // <-- Navbar JS -->
+
+let f_name = JSON.parse(sessionStorage.getItem("name"));
+let sign_in = document.getElementById("sign-in");
+
+// sign_in.innerText = "";
+sign_in.innerText = f_name[f_name.length-1];
