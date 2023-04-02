@@ -97,7 +97,7 @@ function setUser(data) {
 // redirecting to dashboard
 
 function redirect() {
-    location.href = "/Admin/Admin_dashboard/dashboard.html"
+    location.href = "/Admin/dashboard.html"
 }
 
 
