@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+</head>
+<link rel="stylesheet" href="./styles/dropdown.css">
+<link rel="stylesheet" href="./index.css">
+<link rel="stylesheet" href="./headder.css">
+<link rel="stylesheet" href="./styles/cart.css">
+
+<body>
+
+   
+  
+    <div class="nav">
+      <div id="product-container" >
+        <!-- Here Append All the cart Products  -->
+      </div>
+
+      <div class="placeorder">
+        <button>Place Order</button>
+      </div>
+
+    </div>
+  
+
+  </body>
+
+  <script>
+    // Write all necessery JS here
+
+    let placeorder= document.querySelector(".placeorder>button")
+    placeorder.addEventListener("click",()=>{
+        alert("Order Placed")
+        localStorage.clear()
+        location.reload()
+      })
+
+  
+    let CartContainer = document.getElementById("product-container");
+  
+    let Cart = JSON.parse(localStorage.getItem("cart")) || [];
+  
+    function DisplayProduct() {
+      let originalprice = document.getElementById("originalprice");
+      let savings = document.getElementById("savings");
+      let delivery = document.getElementById("delivery");
+      let tax = document.getElementById("tax");
+      let total = document.getElementById("total");
+  
+      CartContainer.innerHTML = "";
+
+      
+  
+      Cart.forEach((product) => {
+        let image = document.createElement("img");
+        let details = document.createElement("p");
+        let price = document.createElement("h3");
+        let Remove = document.createElement("button");
+        let Increase = document.createElement("button");
+        let Decrease = document.createElement("button");
+        let card = document.createElement("div");
+        let quantity = document.createElement("span");
+  
+        image.src = product.image;
+        details.textContent = product.title;
+        price.textContent =  ("Price "+(product.price * product.quantity) +" For "+ product.quantity +" pice");
+        Remove.textContent = "Remove";
+        quantity.textContent = product.quantity + " pic";
+
+        
+        card.append(
+          image,
+          details,
+          quantity,
+          price,
+        );
+        CartContainer.append(card);
+      });
+  
+      let sum = 0;
+      for (let i = 0; i < Cart.length; i++) {
+        sum += Cart[i].price * Cart[i].quantity;
+      }
+
+      originalprice.textContent = Math.floor(sum);
+      savings.textContent = Math.floor(sum * 0.05);
+      delivery.textContent = sum;
+      tax.textContent = Math.floor(sum * 0.1);
+
+      total.textContent = eval(Math.floor(sum - sum * 0.05 + sum * 0.1));
+
+      location.reload()
+    }
+
+    
+  
+    DisplayProduct();
+    
+  
+    // Write all necessery JS here
+  </script>
+</html>
