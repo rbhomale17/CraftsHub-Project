@@ -99,11 +99,11 @@ body{
     }
     #product-container > div {
       /* width: 4000px; */
-      height: 400px;
+      height: 500px;
       border: 2px solid grey;
       border-radius: 20px;
       text-align: center;
-      width: 250px;
+      width: 300px;
       padding: 10px;
       margin: 50px auto;
       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -146,11 +146,22 @@ body{
       text-align: center;
     }
   
-    #check{
+    #check button{
       /* border: solid; */
+      width: 100%;
+      background-color: #902735;
+      color: white;
       margin: 50px auto;
       text-align: center;
+      padding: 10px;
     }
+
+    #check button {
+      color :white;
+      font-size: 20px;
+    }
+
+    
   
     #form{
       border: 2px solid grey;
@@ -194,9 +205,12 @@ body{
   
   
     .placeorder button{
-      /* border: solid; */
-      background-color: #fc2779;
       width: 100%;
+      background-color: #902735;
+      color: white;
+      margin: 50px auto;
+      text-align: center;
+      padding: 10px;
     }
    
 
