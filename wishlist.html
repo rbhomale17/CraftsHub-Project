@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart page</title>
-
     <link rel="stylesheet" href="./styles/cart.css">
     <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
@@ -15,74 +14,45 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 </head>
 <body>
-  <div id="wrapper">
-  <div id="discount">GET RS 50 OFF ON ORDERS ABOVE RS 100</div>
-  <nav class="navbar">
-      <div class="top-nav">
-        <div class="logo">
-          <a href="/index.html"><img src="./2.logos.jpg" alt=""></a>
-        </div>
-        <div class="search-bar">
-          <div class="title">SEARCH</div>
-          <input type="search" name="" id="search" placeholder="Search here for products in Kolkata">
-          <div class="search-icon">
-              <i class="fa fa-search" id="search-btn"></i>
+    <div id="wrapper">
+      <div id="discount">GET RS 50 OFF ON ORDERS ABOVE RS 100</div>
+      <nav class="navbar">
+          <div class="top-nav">
+            <div class="logo">
+              <img src="./2.logos.jpg" alt="">
+            </div>
+            <div class="search-bar">
+              <div class="title">SEARCH</div>
+              <input type="search" name="" id="search" placeholder="Search here for products in Kolkata">
+              <div class="search-icon">
+                  <i class="fa fa-search"></i>
+              </div>
+            </div>
+            <div class="nav-buttons">
+              <a href="./sign.html" id="sign-in"><i class="fa fa-user"></i> Sign In / Register</a>
+              <a href="#"> <i class="fa-regular fa-heart"></i> Wishlist</a>
+              <a href="./Cart.html"> <i class="fa-solid fa-cart-shopping"></i>Cart</a>
+            </div>
           </div>
-        </div>
-        <div class="nav-buttons">
-          <a href="/sign.html" id="sign-in"><i class="fa fa-user"></i> Sign In / Register</a>
-          <a href="#"> <i class="fa-regular fa-heart"></i> Wishlist</a>
-          <a href="/Cart.html"><i class="fa-solid fa-cart-shopping"></i>Cart</a>
-        </div>
-      </div>
-      <div class="bottom-nav">
-        <a href="#">Stores Near Me</a>
-        <a href="/product.html">All Products</a>
-        <a href="/fashion.html">Fashion</a>
-        <a href="/makeup.html">Beauty & Personal Care</a>
-        <a href="/home_decor.html">Home Decor</a>
-        <a href="/electronic.html">Electronics</a>
-      </div>
-    </nav>
-</div>
+          <div class="bottom-nav">
+            <a href="#">Stores Near Me</a>
+            <a href="#">All Products</a>
+            <a href="#">Fashion</a>
+            <a href="#">Beauty & Personal Care</a>
+            <a href="#">Home Decor</a>
+            <a href="">Electronics</a>
+          </div>
+        </nav>
+        
+        
+    </div>
 
     <div class="nav">
         <div id="product-container">
           <!-- Here Append All the cart Products  -->
         </div>
 
-        <div class="checkout">
-          <h1>Order Sumary</h1>
-          <div class="details">
-            <div>
-              <div><p>Original Price</p></div>
-              <div id="originalprice">0</div>
-            </div>
-            <hr />
-            <div>
-              <div><p>Savings 5%</p></div>
-              <div id="savings">0</div>
-            </div>
-            <hr />
-            <div>
-              <div><p>Delivery charges</p></div>
-              <div id="delivery">Free</div>
-            </div>
-            <hr />
-            <div>
-              <div>Taxes 10%</div>
-              <div id="tax">0</div>
-            </div>
-            <hr />
-            <div>
-              <div>Total Price</div>
-              <div id="total">0</div>
-            </div>
-          </div>
-          <div id="check">
-            <button ><a href="./checkout.html"style="color:white" >Proceed TO checkout</a></button>
-          </div>
-        </div>
+       
       </div>
 
       <div id="f-main">
@@ -235,55 +205,7 @@
   // let bag = document.querySelector(".bag");
   // bag.onclick = () => {
   //   location.href = "./cart.html";
-  // };
+  // }
 
-  let search = document.getElementById("search");
-let search_btn = document.getElementById("search-btn");
-
-search_btn.addEventListener("click", function(){
-  console.log(search.value.toUpperCase() == "FASHION");
-  if(search.value.toUpperCase() == "PRODUCT"){
-    // window.open("product.html")
-    location.href="/product.html"
-  }
-  if(search.value.toUpperCase() == "FASHION"){
-    // window.open("fashion.html")
-    location.href="/fashion.html"
-    // redirect();
-  }
-  if(search.value.toUpperCase() == "BEAUTY"){
-    // window.open("makeup.html")
-    location.href="/makeup.html"
-  }
-  search.value = "";
-})
-// function redirect(){
-//   location.href="/fashion.html";
-// }
-
-
-search.addEventListener("search", function(){
-  if(search.value.toUpperCase() == "PRODUCT"){
-    // window.open("product.html")
-    location.href="/product.html"
-  }
-  if(search.value.toUpperCase() == "FASHION"){
-    // window.open("fashion.html")
-    location.href="/fashion.html"
-  }
-  if(search.value.toUpperCase() == "BEAUTY"){
-    // window.open("makeup.html")
-    location.href="/product.html"
-  }
-  search.value = "";
-})
-
-    // <-- Navbar JS -->
-
-let f_name = JSON.parse(sessionStorage.getItem("name"));
-let sign_in = document.getElementById("sign-in");
-
-// sign_in.innerText = "";
-sign_in.innerText = f_name[f_name.length-1];
   </script>
 </html>
