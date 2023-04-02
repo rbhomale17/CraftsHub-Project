@@ -30,3 +30,23 @@ sign_in.innerText = f_name[f_name.length-1];
 
 
 
+let search = document.getElementById("search");
+let search_btn = document.getElementById("search-btn");
+
+search_btn.addEventListener("click", function(){
+  if(search.value.toUpperCase() == "PRODUCTS"){
+    window.open("product.html")
+  }
+  if(search.value.toUpperCase() == "FASHION"){
+    window.open("fashion.html")
+  }
+  if(search.value.toUpperCase() == "BEAUTY"){
+    window.open("makeup.html")
+  }
+  search.value = "";
+})
+
+
+
+
+

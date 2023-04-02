@@ -51,7 +51,7 @@
     padding: 0px 10px;
 }
 
-/* <--- Navbar CSS ---> */
+                        /* <--- Navbar CSS ---> */
 
 .navbar {
     background-color: #fff;
@@ -135,6 +135,9 @@ display: flex;
 }
   }
   @media screen and (max-width: 600px) {
+    .navbar{
+        position: relative;
+    }
     .nav-buttons {
       flex-direction: column;
     }
@@ -143,9 +146,10 @@ display: flex;
     }
   }
 
-  /* <--- Navbar CSS ---> */
+                            /* <--- Navbar CSS ---> */
 
-  /* <--- small slider ---> */
+
+                           /* <--- small slider ---> */
 
   .main-carousel{
     margin-top: 30px;
@@ -158,19 +162,34 @@ display: flex;
     width: 100%;
     height: 200px;
   }
+  @media screen and (max-width: 900px){
+    .carousel-cell{
+      width: 33%;
+    }
+  }
+  @media screen and (max-width: 700px){
+    .carousel-cell{
+      width: 50%;
+    }
+  }
+  @media screen and (max-width: 600px){
+    .carousel-cell{
+      width: 100%;
+    }
+  }
 
 
-/* <--- small slider ---> */
+                            /* <--- small slider ---> */
 
-/* <--- Big Slider ---> */
+                               /* <--- Big Slider ---> */
 
 .slideshow-wrapper{
-    border: 2px solid black;
     margin-top: 40px;
     height: 450px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
+    cursor: pointer;
 }
 .slideshow{
     width: 100%;
@@ -274,6 +293,7 @@ justify-content: center;
     color: #ffffff;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 .b-card .b-image{
@@ -284,7 +304,16 @@ justify-content: center;
     width: 100%;
     height: 60px;
     padding: 10px;
+    border-radius: 50px;
 }
+@media screen and (max-width: 750px){
+    .slide-bottom{
+        padding-right: 20px;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap : 10px;
+    }
+  }
 /* <--- Big Slider ---> */
 
 #grid-cont{
@@ -301,6 +330,12 @@ justify-content: center;
 .grid-img img{
     width: 100%;
 }
+@media screen and (max-width: 900px){
+    #grid-cont{
+        display: flex;
+        flex-direction: column;
+    }
+  }
 
 /* <--footer part --> */
 #f-main{
