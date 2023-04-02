@@ -373,7 +373,7 @@ let s_email = document.getElementById("s-email");
 let s_pass = document.getElementById("s-pass");
 let sign_in = document.getElementById("sign-in");
 
-let f_name = JSON.parse(localStorage.getItem("name")) || [];
+let f_name = JSON.parse(sessionStorage.getItem("name")) || [];
 
 sign_in.addEventListener("click", function(e){
     e.preventDefault();
@@ -392,9 +392,10 @@ sign_in.addEventListener("click", function(e){
 	for(let i=0 ; i<data.length ; i++){
 		if(obj.email === data[i].email && obj.password === data[i].password) {
 			alert("Login Successfull")
-			window.open("./index.html")
+			// window.open("./index.html")
+			location.href="/index.html"
 			f_name.push(data[i].firstname)
-			localStorage.setItem("name", JSON.stringify(f_name))
+			sessionStorage.setItem("name", JSON.stringify(f_name))
 		}
 		else if (obj.email !== data[i].email || obj.password !== data[i].password){
 			swal("Warning !!", "Please check Email or Password!", "error");
