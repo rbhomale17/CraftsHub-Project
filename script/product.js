@@ -70,6 +70,37 @@ function fetchdata(page,limit,sortDirection){
      console.log(err)
   })
 }
+
+let filterSelect=document.getElementById("filter");
+filterSelect.addEventListener("change",function(){
+  if(filterSelect.value===""){
+    // fetch()
+    fetchdata(1,8)    
+  }else{
+    let url = `https://project-json-server-dkem.onrender.com/makeup`
+
+  if(filterSelect.value=="500")
+  {
+    url += "?price_gte=500&price_lte=1000";
+  }
+  else if(filterSelect.value=="300")
+  {
+    url += "?price_gte=1&price_lte=500";
+  }
+  else if(filterSelect.value=="1000"){
+    url += "?price_gte=1000";
+  }
+  fetch(url)
+  .then((res)=>{
+    return res.json();
+  })
+  .then((data)=>{
+    console.log(data)
+    displaydata(data)
+  })
+  }
+})
+
 let Cart = JSON.parse(localStorage.getItem("cart"))||[]
 let wishlist = JSON.parse(localStorage.getItem("wish"))||[]
 function displaydata(data){

@@ -132,6 +132,9 @@
     width: 330px;
     /* border: 1px solid red; */
   }
+  .sort-by>h3{
+    margin-top: 30px;
+  }
   hr {
     display: block;
     height: 400px;

@@ -24,6 +24,7 @@ function fetchdata(page,limit,sortDirection){
   } else if (sortDirection === "high-to-low") {
     url += "&_sort=price&_order=desc";
   }
+ 
   fetch(url)
 
   .then((res)=>res.json())
@@ -35,6 +36,63 @@ function fetchdata(page,limit,sortDirection){
      console.log(err)
   })
 }
+
+// document.getElementById("p").addEventListener("change", filterByPrice);
+//   document.getElementById("q").addEventListener("change", filterByPrice);
+//   document.getElementById("r").addEventListener("change", filterByPrice);
+//   document.getElementById("s").addEventListener("change", filterByPrice);
+//   function filterByPrice() {
+//     let prices = [];
+//     if (document.getElementById("p").checked) {
+//       prices.push("price_gte=2000&price_lte=1000");
+//     }
+//     if (document.getElementById("q").checked) {
+//       prices.push("price_gte=1000&price_lte=500");
+//     }
+//     if (document.getElementById("r").checked) {
+//       prices.push("price_gte=500&price_lte=300");
+//     }
+//     if (document.getElementById("s").checked) {
+//       prices.push("price_gte=350&price_lte=200");
+//     }
+//     let url = "https://project-json-server-dkem.onrender.com/fashionProduct?";
+//     if (prices.length > 0) {
+//       url += prices.join("&");
+//     } else {
+//       url += "_page=1&_limit=8";
+//     }
+//   }
+
+let filterSelect=document.getElementById("filter");
+filterSelect.addEventListener("change",function(){
+  if(filterSelect.value===""){
+    // fetch()
+    fetchdata(1,8)    
+  }else{
+    let url = `https://project-json-server-dkem.onrender.com/makeup`
+
+  if(filterSelect.value=="500")
+  {
+    url += "?price_gte=500&price_lte=1000";
+  }
+  else if(filterSelect.value=="300")
+  {
+    url += "?price_gte=1&price_lte=500";
+  }
+  else if(filterSelect.value=="1000"){
+    url += "?price_gte=1000";
+  }
+  fetch(url)
+  .then((res)=>{
+    return res.json();
+  })
+  .then((data)=>{
+    console.log(data)
+    displaydata(data)
+  })
+  }
+})
+
 let Cart = JSON.parse(localStorage.getItem("cart"))||[]
 let wishlist = JSON.parse(localStorage.getItem("wish"))||[]
 function displaydata(data){

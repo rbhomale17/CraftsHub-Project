@@ -29,6 +29,9 @@
   top: 0;
   z-index: 999;
 }
+.sort-by>h3{
+  margin-top: 30px;
+}
 /* Style the top navigation */
 .top-nav {
   display: flex;
