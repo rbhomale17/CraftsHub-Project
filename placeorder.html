@@ -10,6 +10,10 @@
 <link rel="stylesheet" href="./styles/index.css" />
     
     <link rel="stylesheet" href="./styles/cart.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 
 <body>
 
@@ -23,15 +27,15 @@
             <div class="title">SEARCH</div>
             <input type="search" name="" id="search" placeholder="Search here for products in Kolkata">
             <div class="search-icon">
-                <i class="fa fa-search"></i>
+                <i class="fa fa-search" id="search-btn"></i>
             </div>
           </div>
-          <div class="nav-buttons">
-            <a href="./sign.html" id="sign-in"><i class="fa fa-user"></i> Sign In / Register</a>
-            <a href="./wishlist.html"> <i class="fa-regular fa-heart"></i> Wishlist</a>
-            <a href="./Cart.html"> <i class="fa-solid fa-cart-shopping"></i>Cart</a>
-          </div>
-        </div>
+           <div class="nav-buttons">
+            <a href="/sign.html" id="sign-in"><i class="fa fa-user"></i> Sign In / Register</a>
+             <a href="./wishlist.html"> <i class="fa-regular fa-heart"></i> Wishlist</a>
+             <a href="/Cart.html"> <i class="fa-solid fa-cart-shopping"></i>Cart</a>
+           </div>
+         </div>
         <div class="bottom-nav">
           <a href="#">Stores Near Me</a>
           <a href="./product.html">All Products</a>
@@ -167,6 +171,54 @@
     DisplayProduct();
     
   
+let search = document.getElementById("search");
+let search_btn = document.getElementById("search-btn");
+
+search_btn.addEventListener("click", function(){
+  console.log(search.value.toUpperCase() == "FASHION");
+  if(search.value.toUpperCase() == "PRODUCT"){
+    // window.open("product.html")
+    location.href="/product.html"
+  }
+  if(search.value.toUpperCase() == "FASHION"){
+    // window.open("fashion.html")
+    location.href="/fashion.html"
+    // redirect();
+  }
+  if(search.value.toUpperCase() == "BEAUTY"){
+    // window.open("makeup.html")
+    location.href="/makeup.html"
+  }
+  search.value = "";
+})
+// function redirect(){
+//   location.href="/fashion.html";
+// }
+
+
+search.addEventListener("search", function(){
+  if(search.value.toUpperCase() == "PRODUCT"){
+    // window.open("product.html")
+    location.href="/product.html"
+  }
+  if(search.value.toUpperCase() == "FASHION"){
+    // window.open("fashion.html")
+    location.href="/fashion.html"
+  }
+  if(search.value.toUpperCase() == "BEAUTY"){
+    // window.open("makeup.html")
+    location.href="/product.html"
+  }
+  search.value = "";
+})
+
+    // <-- Navbar JS -->
+
+let f_name = JSON.parse(sessionStorage.getItem("name"));
+let sign_in = document.getElementById("sign-in");
+
+// sign_in.innerText = "";
+sign_in.innerText = f_name[f_name.length-1];
     // Write all necessery JS here
   </script>
 </html>
