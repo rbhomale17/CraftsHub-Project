@@ -132,6 +132,14 @@ background-color: rgb(205, 202, 202);
   width: 330px;
   /* border: 1px solid red; */
 }
+#filter{
+  /* margin-top: 30px; */
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 15px;
+  width: 150px;
+  
+}
 hr {
   display: block;
   height: 400px;

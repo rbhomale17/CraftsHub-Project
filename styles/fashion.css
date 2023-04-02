@@ -135,6 +135,14 @@
   .sort-by>h3{
     margin-top: 30px;
   }
+  #filter{
+    /* margin-top: 30px; */
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 15px;
+    width: 150px;
+    
+  }
   hr {
     display: block;
     height: 400px;
