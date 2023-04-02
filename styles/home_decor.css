@@ -124,16 +124,27 @@ background-color: rgb(205, 202, 202);
   line-height: 30px;
 }
 #sort-by-select{
-   font-size: 18px;
-  /* font-weight: 500;
-  margin-left: 15px; */ 
+  font-size: 18px;
+ /* font-weight: 500;*/
+  margin-left: 15px; 
 }
 .sort-by{
-  font-size: 18px;
-  font-weight: 500;
-  margin-left: 15px;
-  width: 330px;
-  /* border: 1px solid red; */
+ font-size: 18px;
+ font-weight: 500;
+ margin-left: 15px;
+ width: 330px;
+ /* border: 1px solid red; */
+}
+.sort-by>h3{
+ margin-top: 30px;
+}
+#filter{
+ /* margin-top: 30px; */
+ font-size: 18px;
+ font-weight: 500;
+ margin-left: 15px;
+ width: 180px;
+ 
 }
 hr {
   display: block;
