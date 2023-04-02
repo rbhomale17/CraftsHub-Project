@@ -122,8 +122,8 @@
   }
   #sort-by-select{
      font-size: 18px;
-    /* font-weight: 500;
-    margin-left: 15px; */ 
+    /* font-weight: 500;*/
+     margin-left: 15px; 
   }
   .sort-by{
     font-size: 18px;
@@ -140,8 +140,8 @@
     font-size: 18px;
     font-weight: 500;
     margin-left: 15px;
-    width: 150px;
-    font-size: 18px;
+    width: 180px;
+    
   }
   hr {
     display: block;
