@@ -108,7 +108,7 @@ function setUser() {
             return res.json()
         })
         .then((data) => {
-            alert(`New Account for ${firstname.value} been created`);
+            alert(`New Account for ${firstname.value} has been created.`);
             // console.log(data)
             alert("Redirecting to Admin Dashboard");
             redirect();
