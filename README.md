@@ -12,9 +12,9 @@
 
 ***Team Member-2 & Student Code*** : ***Ajit Kumar Roy ( fw25_259 ) https://github.com/Ajitroy01***
 
-***Team Member-3 & Student Code*** : ***Rameshwar Gaidhane ( fw24_312 ) https://github.com/astha9040***
+***Team Member-3 & Student Code*** : ***Rameshwar Gaidhane ( fw24_312 ) https://github.com/rhgaidhane123***
 
-***Team Member-4 & Student Code*** : ***Astha Sachan ( fw23_0814 ) https://github.com/rhgaidhane123***
+***Team Member-4 & Student Code*** : ***Astha Sachan ( fw23_0814 ) https://github.com/astha9040***
 
 ***IA Manager: Adarsha Khatua***
 
@@ -79,7 +79,7 @@ Log Out: In the upper right corner of the admin webpage, there is an option call
 
 ####################################################################################
 
-***Our Crafthub website basic flow Given Below***
+***Our Crafthub website basic flow is Given Below***
 
 ####################################################################################
 
@@ -119,7 +119,7 @@ Log Out: In the upper right corner of the admin webpage, there is an option call
 
 ####################################################################################
 
-***7. Admin Log-in Page***
+***7. Admin Login Page***
 
 <img width="1080" alt="Screenshot 2023-04-03 191940" src="https://user-images.githubusercontent.com/121092445/229532107-c7f7c0eb-0ee3-4eb9-9bb1-d105809e0d18.png">
 
