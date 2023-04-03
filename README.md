@@ -76,3 +76,63 @@ Admin registration: Logged-in admin can create a new admin user from here only.
 Add Product: on clicking on this button new add product page will open after filling necessary data on the form and clicking on submit button new product is added to your webpage or site.
 Track Order: Here Admin can track all orders that have been placed by users ( Customers ), It has search functionality by (name of the user, pin code of delivery, city name, buy_item, mobile number) to check or track the orders.
 Log Out: In the upper right corner of the admin webpage, there is an option called ***Log Out*** present after clicking on that Admin user will be **logged out** of the admin site and redirected to the Home page of the website.
+
+####################################################################################
+
+***Our Crafthub website basic flow Given Below***
+
+####################################################################################
+
+***1. Sign-in & Sign-up Page for Crafthub customers***
+
+<img width="1080" alt="Screenshot 2023-04-03 190922" src="https://user-images.githubusercontent.com/121092445/229531825-92dbf1be-3e91-49a9-9a43-28fdcea55c59.png">
+
+####################################################################################
+
+***2. Navigation Bar***
+
+<img width="1060" alt="Screenshot 2023-04-03 190623" src="https://user-images.githubusercontent.com/121092445/229531648-1af723c6-4531-43b2-9635-20f02cf0a389.png">
+
+####################################################################################
+
+***3. Home Page of Our Site***
+
+<img width="1080" alt="Screenshot 2023-04-03 190612" src="https://user-images.githubusercontent.com/121092445/229531503-34dd1fb7-218d-4008-a24e-0f6a83d738c0.png">
+
+####################################################################################
+
+***4. Product Page***
+
+<img width="1080" alt="Screenshot 2023-04-03 190714" src="https://user-images.githubusercontent.com/121092445/229531905-21658596-8cd9-4616-9886-e09e6e50527b.png">
+
+####################################################################################
+
+***5. Cart Page***
+
+<img width="1080" alt="Screenshot 2023-04-03 190809" src="https://user-images.githubusercontent.com/121092445/229531983-713d817f-e1c6-471d-9f36-81efd74718c5.png">
+
+####################################################################################
+
+***6. Checkout Page***
+
+<img width="1080" alt="Screenshot 2023-04-03 190859" src="https://user-images.githubusercontent.com/121092445/229532044-8b4bb9f6-6480-4449-845b-195e14461ebe.png">
+
+####################################################################################
+
+***7. Admin Log-in Page***
+
+<img width="1080" alt="Screenshot 2023-04-03 191940" src="https://user-images.githubusercontent.com/121092445/229532107-c7f7c0eb-0ee3-4eb9-9bb1-d105809e0d18.png">
+
+####################################################################################
+
+***8. Admin Dashboard Page***
+
+<img width="1076" alt="Screenshot 2023-04-03 191442" src="https://user-images.githubusercontent.com/121092445/229532178-cef1fcb9-9c79-4b17-a5a3-09cedf5f9fa4.png">
+
+####################################################################################
+
+***9. Track Order Page for Admin***
+
+<img width="1080" alt="Screenshot 2023-04-03 191359" src="https://user-images.githubusercontent.com/121092445/229532210-bc31d3dc-e07f-461f-b9ee-9a263f0c6d08.png">
+
+***THANK YOU***
