@@ -39,6 +39,7 @@ We have also created a basic flow for the Back End of the website
 
 ***Back End: CSS, HTML, JAVASCRIPT & JSON SERVER***
 
+***External CSS for Icons : font-awesome :- https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css***
 
 ####################################################################################
 
