@@ -62,7 +62,7 @@ For the Construct Week Project, We created a clone of an Indian E-Commerce websi
 
 ## ***Project App: Deployed on Netlify.com***
 
-***CraftHub.com: https://hilarious-kelpie-472f57.netlify.app/***
+***CraftHub.com: https://craftshub.netlify.app/***
 
 
 ***
